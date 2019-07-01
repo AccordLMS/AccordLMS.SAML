@@ -1,0 +1,71 @@
+﻿<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="DNN.Authentication.SAML" type="Auth_System" version="02.00.00">
+      <friendlyName>DNN.Authentication.SAML</friendlyName>
+      <description>DNN.Authentication.SAML</description>
+      <owner>
+        <name>DNN</name>
+        <organization>DNN</organization>
+        <url/>
+        <email/>
+      </owner>
+      <license>License</license>
+      <releaseNotes>release notes</releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">07.01.01</dependency>
+      </dependencies>
+
+      <components>
+
+        <component type="AuthenticationSystem">
+          <authenticationService>
+            <type>SAML</type>
+            <settingsControlSrc>DesktopModules/AuthenticationServices/DNN.Authentication.SAML/Settings.ascx</settingsControlSrc>
+            <loginControlSrc>DesktopModules/AuthenticationServices/DNN.Authentication.SAML/Login.ascx</loginControlSrc>
+            <logoffControlSrc>DesktopModules/AuthenticationServices/DNN.Authentication.SAML/Logoff.ascx</logoffControlSrc>
+          </authenticationService>
+        </component>
+
+        <component type="File">
+          <files>
+            <basePath>DesktopModules/AuthenticationServices/DNN.Authentication.SAML</basePath>
+            <file>
+              <name>Settings.ascx</name>
+            </file>
+            <file>
+              <name>Login.ascx</name>
+            </file>
+            <file>
+              <name>Logoff.ascx</name>
+            </file>
+            <file>
+              <path>App_LocalResources</path>
+              <name>Settings.ascx.resx</name>
+            </file>
+            <file>
+              <path>App_LocalResources</path>
+              <name>Login.ascx.resx</name>
+            </file>
+            <file>
+              <path>App_LocalResources</path>
+              <name>Logoff.ascx.resx</name>
+            </file>
+          </files>
+        </component>
+
+        <component type="Assembly">
+          <assemblies>
+            <assembly>
+              <path>bin</path>
+              <name>DNN.Authentication.SAML.dll</name>
+              <version>01.01.00.00</version>
+            </assembly>
+          </assemblies>
+        </component>
+
+      </components>
+
+
+    </package>
+  </packages>
+</dotnetnuke>

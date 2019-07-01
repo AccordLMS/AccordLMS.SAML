@@ -1,0 +1,3938 @@
+
+.lms-Popup_Content input[type="text"] {
+    margin: 0;
+    padding: 2px 1px 3px;
+}
+
+.izmlms-nowraplabel label {
+    white-space: nowrap;
+}
+
+.izmlms-indented {
+}
+
+.lms-Popup_Content label {
+    display: inline-block;
+    line-height: 25px;
+    margin-bottom: 0;
+}
+
+.lms-GeneralContent label {
+    display: inline-block;
+    line-height: 18px;
+    margin-bottom: 0;
+}
+
+.lms-Popup_Content .dnnFormMessage, .lms-GeneralContent .dnnFormMessage {
+    max-width: 100%;
+    width: 100%;
+}
+
+.dnnFormMessage {
+    display: inline-block;
+    width: 100%;
+}
+
+.lms-Popup_Content h2.dnnFormSectionHead {
+    text-align: left;
+}
+
+    .lms-Popup_Content h2.dnnFormSectionHead a {
+        color: #333 !important;
+    }
+
+.lms-Popup_Content h4 {
+    text-align: left !important;
+}
+
+    .lms-Popup_Content h4 span {
+        font-size: 15px !important;
+    }
+
+.lms-Popup_Content .dnnTooltip .dnnFormHelpContent span {
+    color: #ddd;
+}
+
+.izmlms-successbold {
+    color: green;
+    font-weight: bold;
+}
+
+.izmlms-failurebold, .izmlms-failureboldTooltip {
+    color: maroon !important;
+    font-weight: bold !important;
+}
+
+.izmlms-failurebold {
+    float: left;
+}
+
+.izmlms-success, span.izmlms-success {
+    color: green;
+    font-weight: normal;
+}
+
+.izmlms-failure, span.izmlms-failure, span.izmlms-failure span {
+    color: maroon !important;
+    font-weight: bold !important;
+    float: left;
+    /*font-size: 14px;*/
+}
+
+    span.izmlms-failure[style*="inline"] {
+        display: block !important;
+    }
+
+.izmlms-failureNormal, span.izmlms-failureNormal {
+    color: maroon !important;
+    font-weight: normal !important;
+}
+
+.izmlms-inputdisable {
+    color: gray;
+}
+
+.izmlms-controls {
+}
+
+.izmlms-conditions {
+    padding: 3px 5px;
+}
+
+.izmlms-red {
+    background: url("images/Catalog/FlagGreen-16x16.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+.izmlms-preview {
+    background: url("images/LaunchPreview.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+.izmlms-attempts {
+    background: url("images/btnAttempts.gif") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+.izmlms-results {
+    background: url("images/QuizResults.gif") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+.izmlms-edit {
+    background: url("images/btnEdit.gif") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+.izmlms-notification-backgroud-div, .izmlms-location-backgroud-div {
+    background-color: #efefff;
+    border: 1px solid #fff;
+    border-radius: 2px 2px 2px 2px;
+    padding: 5px;
+}
+
+.izmlms-failed {
+    color: maroon;
+    font-weight: 700;
+}
+
+.izmlms-passed-completed {
+    color: green;
+    font-weight: 700;
+}
+
+.izmlms-nocontent {
+    background: url("images/Exclamation-32x32.png") no-repeat scroll 6px 6px #ffc;
+    border: 1px solid #e6962b;
+    margin: 15px;
+    padding: 15px;
+}
+
+    .izmlms-nocontent span {
+        display: block;
+        font-weight: 700;
+        margin-left: 45px;
+    }
+
+.izmlms-btntdleft {
+    background-image: url("images/ButtonOrangeLeft.png");
+    background-repeat: no-repeat;
+    height: 23px;
+    width: 7px;
+}
+
+.izmlms-btntdmiddle {
+    background-image: url("images/ButtonOrangeMiddle.png");
+    background-repeat: repeat-x;
+    height: 23px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+    .izmlms-btntdmiddle a, .izmlms-btntdmiddle a:visited, .izmlms-btntdmiddle a:link, .izmlms-btntdmiddle a:active {
+        color: #fff !important;
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none !important;
+    }
+
+        .izmlms-btntdmiddle a:hover {
+            color: #000 !important;
+            font-weight: 700;
+        }
+
+.izmlms-btntdright {
+    background-image: url("images/ButtonOrangeRight.png");
+    background-repeat: no-repeat;
+    height: 23px;
+    width: 14px;
+}
+
+div#izmlms-menubar-nav-wrapper {
+    border-bottom: 3px solid #474747;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+.lms-MenuBar div#izmlms-menubar-nav-wrapper {
+    margin-bottom: 10px !important;
+}
+
+#izmlms-menubar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    #izmlms-menubar-nav td {
+        margin: 0;
+        padding: 0;
+    }
+
+    #izmlms-menubar-nav tr {
+    }
+
+    #izmlms-menubar-nav td a {
+        -moz-border-bottom-colors: none;
+        -moz-border-image: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        background: none repeat scroll 0 0 #707070;
+        border-bottom: solid 1px #707070;
+        border-top: solid 1px #474747;
+        border-left: solid 1px #474747;
+        border-right: solid 1px #474747;
+        display: block;
+        /*font-size: 13px;*/
+        font-weight: bold;
+        margin-left: 4px;
+        padding: 4px 10px;
+    }
+
+        #izmlms-menubar-nav td a:link, #izmlms-menubar-nav td a:visited {
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        #izmlms-menubar-nav td a:hover, #izmlms-menubar-nav td a:active {
+            background: none repeat scroll 0 0 #474747;
+            color: #fff !important;
+            border-bottom: 1px solid #474747;
+            text-decoration: none;
+        }
+
+    #izmlms-menubar-nav .izmlms-menubar-active {
+    }
+
+    #izmlms-menubar-nav .izmlms-menubar-inactive {
+    }
+
+    #izmlms-menubar-nav .izmlms-menubar-active a:link, #izmlms-menubar-nav .izmlms-menubar-active a:visited {
+        background: none repeat scroll 0 0 #474747;
+        border-bottom: 1px solid #474747;
+        color: #fff !important;
+    }
+
+    #izmlms-menubar-nav a.izmlms-menubar-active:hover {
+        color: #1b4083 !important;
+    }
+
+.izmlms-filelist {
+    color: #477110;
+    /*font-size: 14px;*/
+    font-weight: 700;
+}
+
+.izmlms-pullquote {
+    background-color: #faefb8;
+    border-color: #dec8a0;
+    border-right: 1px solid #dec8a0;
+    border-style: solid;
+    border-width: 1px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.izmlms-quizresultsdataheader {
+    background-color: #faefb8;
+    border: 1px solid #dec8a0;
+    color: #000;
+    font-weight: 700;
+}
+
+table.izmlms-quizresultsdataheader {
+    float: right;
+    height: 25px;
+    vertical-align: middle;
+}
+
+th.izmlms-quizresultsdataheader {
+    height: 25px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+    th.izmlms-quizresultsdataheader span {
+        padding: 3px;
+    }
+
+    th.izmlms-quizresultsdataheader a {
+        padding: 3px;
+    }
+
+.izmlms-quizresultsdata {
+    padding: 3px;
+}
+
+td.izmlms-quizresultsdata {
+    vertical-align: middle;
+}
+
+.izmlms-quizresultsquestionsitem {
+    float: left;
+}
+
+.izmlms-buttonlink {
+    background: none repeat scroll 0 0 #5373b9;
+    border-color: #95b5e1 #3f608d #3f608d #95b5e1;
+    border-style: solid;
+    border-width: 2px 3px 3px 2px;
+    color: #fff !important;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    height: auto;
+    padding: 2px 8px 3px 9px;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+}
+
+    a.izmlms-buttonlink, a.izmlms-buttonlink:link, a.izmlms-buttonlink:active, a.izmlms-buttonlink:visited, izmlms-buttonlink a:link, .izmlms-buttonlink a:active, .izmlms-buttonlink a:visited {
+        background: none repeat scroll 0 0 #5373b9;
+        border-color: #95b5e1 #3f608d #3f608d #95b5e1;
+        border-style: solid;
+        border-width: 2px 3px 3px 2px;
+        color: #fff;
+        font-weight: bold;
+        padding: 2px 8px 3px 9px;
+        text-decoration: none;
+    }
+
+        a.izmlms-buttonlink:hover, .izmlms-buttonlink:hover, a.izmlms-buttonlink:hover, .izmlms-buttonlink a:hover {
+            border-color: #3f608d #95b5e1 #95b5e1 #3f608d;
+            border-style: solid;
+            border-width: 3px 2px 2px 3px;
+            color: #fff !important;
+            padding: 1px 9px 4px 8px;
+            text-decoration: none;
+        }
+
+.izmlms-buttonlinkyellow {
+    background: none repeat scroll 0 0 #dfaa1b;
+    border-color: #f1b923 #ba8400 #ba8400 #f1b923;
+    border-style: solid;
+    border-width: 2px 3px 3px 2px;
+    color: #fff !important;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    height: auto;
+    padding: 2px 8px 3px 9px;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+}
+
+a.izmlms-buttonlinkyellow, .izmlms-buttonlinkyellow {
+    background: none repeat scroll 0 0 #dfaa1b;
+    border-color: #f1b923 #ba8400 #ba8400 #f1b923;
+    border-style: solid;
+    border-width: 2px 3px 3px 2px;
+    color: #fff;
+    font-weight: bold;
+    padding: 2px 8px 3px 9px;
+    text-decoration: none;
+}
+
+    a.izmlms-buttonlinkyellow:hover, .izmlms-buttonlinkyellow:hover {
+        border-color: #ba8400 #f1b923 #f1b923 #ba8400;
+        border-style: solid;
+        border-width: 3px 2px 2px 3px;
+        color: #fff !important;
+        padding: 1px 9px 4px 8px;
+        text-decoration: none;
+    }
+
+.izmlms-buttonlinkgreen {
+    background: none repeat scroll 0 0 #97b554;
+    border-color: #b5ca84 #677c36 #677c36 #b5ca84;
+    border-style: solid;
+    border-width: 2px 3px 3px 2px;
+    color: #fff !important;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    height: auto;
+    padding: 2px 8px 3px 9px;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+}
+
+a.izmlms-buttonlinkgreen, .izmlms-buttonlinkgreen {
+    background: none repeat scroll 0 0 #97b554;
+    border-color: #b5ca84 #677c36 #677c36 #b5ca84;
+    border-style: solid;
+    border-width: 2px 3px 3px 2px;
+    color: #fff;
+    font-weight: bold;
+    padding: 2px 8px 3px 9px;
+    text-decoration: none;
+}
+
+    a.izmlms-buttonlinkgreen:hover, .izmlms-buttonlinkgreen:hover {
+        border-color: #677c36 #b5ca84 #b5ca84 #677c36;
+        border-style: solid;
+        border-width: 3px 2px 2px 3px;
+        color: #fff !important;
+        padding: 1px 9px 4px 8px;
+        text-decoration: none;
+    }
+
+.izmlms-reportsdetailgrid {
+    background-color: #fff9d9;
+    border: 1px solid #beb465;
+}
+
+.izmlms-reportsgrid div {
+    height: auto !important;
+}
+
+.izmlms-reportsgriditem {
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.izmlms-gridspacingbottom {
+    padding-bottom: 15px;
+}
+
+.izmlms-gridspacingtop {
+    padding-top: 15px;
+}
+
+.izmlms-gorupheadergridspacingtop p {
+    display: none;
+}
+
+.izmlms-gorupheadergridspacingtop td {
+    padding-top: 15px;
+}
+
+.izmlms-managerenrollmentbluebackground {
+    background-color: #f1f0fe;
+    padding: 10px;
+}
+
+    .izmlms-managerenrollmentbluebackground br {
+        line-height: 7px;
+    }
+
+.izmlms-managerenrollmentscrolledlist {
+    background-color: #fff;
+    border: 1px solid silver;
+    overflow: auto;
+    height: 190px;
+    min-width: 300px;
+}
+
+    .izmlms-managerenrollmentscrolledlist td {
+        white-space: nowrap;
+    }
+
+.izmlms-summarylobg {
+    border-right: 3px solid transparent;
+    height: 100px;
+}
+
+.izmlms-managertitlebar, .izmlms-learnertitlebar {
+   /*height: 50px;*/ 
+}
+
+#izmlms-manager-table-bg {
+    display: block;
+    height: auto;
+    padding-top: 5px;
+    width: 100%;
+}
+
+.izmlms-manager-table-bg {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+#izmlms-manageraddlink {
+    margin-left: 17px;
+    vertical-align: middle;
+}
+
+    #izmlms-manageraddlink img {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+
+.izmlms-managerattentionbackground {
+    background: none repeat scroll 0 0 #ffc;
+    border: 1px solid #e6962b;
+    margin: 5px;
+    padding: 14px;
+    vertical-align: middle;
+}
+
+#izmlms-managerlonolo {
+    background: url("images/Exclamation-32x32.png") no-repeat scroll 6px 6px #ffc;
+    border: 1px solid #e6962b;
+    margin: 15px;
+    padding: 15px;
+}
+
+    #izmlms-managerlonolo span {
+        display: block;
+        margin-left: 45px;
+    }
+
+#izmlms-license-warning {
+    background: url("images/Exclamation-32x32.png") no-repeat scroll 6px 6px #ffc;
+    border: 1px solid #e6962b;
+    margin: 15px;
+    padding: 15px;
+}
+
+    #izmlms-license-warning span {
+        display: block;
+        margin-left: 45px;
+    }
+
+.izmlms-breadcrumbstitlediv {
+    /*padding-left: 10px;*/
+    padding-right: 10px;
+}
+
+.izmlms-breadcrumbscontent {
+    float: right;
+    width: 100%;
+    padding-top: 8px;
+}
+
+.izmlms-breadcrumbsdiv {
+    /*padding-left: 10px;*/
+    padding-right: 10px;
+}
+
+div .izmlms-breadcrumbs {
+    padding-left: 19px;
+    padding-top: 6px;
+    font-weight: bold;
+}
+
+    div .izmlms-breadcrumbs img {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+.izmlms-presentationactivitygrid {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff;
+    border-color: #000;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+}
+
+.izmlms-reportsbg {
+    font-size: inherit;
+}
+
+.izmls-reportmargin {
+    margin-left: 80px;
+    margin-top: 15px;
+}
+
+.izmlms-reportsbg td {
+    padding-bottom: 2px;
+    padding-top: 0;
+}
+
+.izmlms-reportsbg img {
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.izmlms-excel {
+    background: url("images/ContentType/Spreadsheet-16x16") no-repeat scroll 0 0 transparent;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+.izmlms-collapseall {
+    background: url("images/Catalog/Collapse-11x11.png") no-repeat scroll 0 0 transparent;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+.izmlms-expandall {
+    background: url("images/Catalog/Expand-11x11.png") no-repeat scroll 0 0 transparent;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+.izmlms-tdwidth {
+    width: 45% !important;
+}
+
+.izmlms-tdimgwidth {
+    width: 70px;
+}
+
+#izmlms-reportsnoitems {
+    background: url("images/Exclamation-32x32.png") no-repeat scroll 6px 6px #ffc;
+    border: 1px solid #e6962b;
+    margin: 15px;
+    padding: 15px;
+}
+
+    #izmlms-reportsnoitems span {
+        display: block;
+        margin-left: 45px;
+    }
+
+.izmlms-bookmenu a {
+    background: url("~/images/add.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    margin-left: 5px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+}
+
+#izmlms-booknocontent {
+    background: url("images/Exclamation-32x32.png") no-repeat scroll 6px 6px #ffc;
+    border: 1px solid #e6962b;
+    margin: 15px;
+    padding: 15px;
+}
+
+    #izmlms-booknocontent span {
+        display: block;
+        margin-left: 45px;
+    }
+
+img.izmlms-bookpaging {
+    border-width: 0;
+    cursor: pointer;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+table.izmlms-bookpaging {
+    background: url("images/reports_bg.gif") repeat-x scroll 0 0 transparent;
+    border-width: 0;
+    cursor: pointer;
+    font-size: 11px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+td.izmlms-bookmenu a.commandbutton span {
+    color: #273d83 !important;
+}
+
+    td.izmlms-bookmenu a.commandbutton span:hover {
+        color: #f2781e !important;
+    }
+
+#izmlms-studentlimitexceeded {
+    background: none repeat scroll 0 0 #ffc;
+    border: 1px solid #e6962b;
+    margin: 5px;
+    padding: 15px 15px 40px;
+    width: 70%;
+}
+
+    #izmlms-studentlimitexceeded span {
+        display: block;
+        margin-left: 5px;
+    }
+
+        #izmlms-studentlimitexceeded span strong {
+            color: #c50000;
+        }
+
+.izmlms-reportsettingtable {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.izmlms-settingspage-left {
+    float: left;
+}
+
+.izmlms-settingspage-clear {
+    clear: both;
+    width: 100%;
+}
+
+.izmlms-settingspage-tdlabel {
+    padding: 5px 5px 5px 15px;
+    width: 220px !important;
+}
+
+.izmlms-settingspage-tdcontrol {
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.izmlms-settingspage-buttons {
+    padding-top: 25px;
+    text-align: center;
+}
+
+.izmlms-drctl-reports-tdlabel {
+    float: left;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    width: 180px;
+}
+
+.izmlms-drctl-reports-tdcontrols {
+    float: left;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.izmlms-drctl-reports-tr {
+    clear: both;
+    height: 24px;
+}
+
+.izmlms-grctl-divusers {
+    clear: both;
+}
+
+.izmlms-grctl-divuserslabel {
+    float: left;
+}
+
+.izmlms-grctl-divuserscontrols {
+    float: left;
+}
+
+.izmlms-grctl-divportals {
+    clear: both;
+}
+
+.izmlms-grctl-divportalslabel {
+    float: left;
+    padding-bottom: 5px;
+    width: 8pc;
+}
+
+.izmlms-grctl-divportalsdrp {
+    float: left;
+    padding-bottom: 5px;
+}
+
+.izmlms-grctl-divrolegrops {
+    clear: both;
+}
+
+.izmlms-grctl-divrolegroupslabel {
+    float: left;
+    width: 8pc;
+}
+
+.izmlms-grctl-divrolegroupsdrp {
+    float: left;
+}
+
+.izmlms-grctl-divroles {
+    clear: both;
+}
+
+.izmlms-grctl-divroleslabel {
+    float: left;
+    padding-top: 5px;
+    width: 8pc;
+}
+
+.izmlms-grctl-divrolesdrp {
+    float: left;
+    padding-top: 5px;
+}
+
+#izmlms-navlist {
+    background: url("Images/border.gif") repeat-x scroll center bottom transparent;
+    list-style: none outside none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+}
+
+    #izmlms-navlist li {
+        float: left;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        #izmlms-navlist li a {
+            -moz-border-bottom-colors: none;
+            -moz-border-image: none;
+            -moz-border-left-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-top-colors: none;
+            background: none repeat scroll 0 0 #4969a6;
+            border-color: #133e7a;
+            border-style: solid;
+            border-width: 1px 1px 0;
+            display: block;
+            /*font-size: 13px;*/
+            font-weight: bold;
+            margin-left: 4px;
+            padding: 4px 10px;
+        }
+
+            #izmlms-navlist li a:link, #izmlms-navlist li a:visited {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            #izmlms-navlist li a:hover, #izmlms-navlist li a:active {
+                background: none repeat scroll 0 0 #fff;
+                color: #1b4083 !important;
+                text-decoration: none;
+            }
+
+            #izmlms-navlist li a.izmlms-current {
+                background: none repeat scroll 0 0 #fff;
+                border-bottom: 3px solid #fff;
+                color: #000 !important;
+            }
+
+                #izmlms-navlist li a.izmlms-current:hover {
+                    color: #1b4083;
+                }
+
+.izmlms-spnaddenrollment {
+    clear: both;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.izmlms-conditionalsettings-tbl {
+}
+
+.izmlms-rblitem td {
+    width: 50%;
+}
+
+.izmlms-treebold {
+    font-weight: 700 !important;
+    white-space: normal;
+}
+
+.izmlms-treenormal {
+    font-weight: 400 !important;
+    white-space: normal;
+}
+
+.izmlms-treebold-enabled {
+    font-weight: 700 !important;
+    white-space: normal;
+    color: #000 !important;
+}
+
+.izmlms-treebold-disabled {
+    font-weight: 700 !important;
+    white-space: normal;
+    color: #ccc !important;
+}
+
+.izmlms-treenormal-enabled {
+    font-weight: 400 !important;
+    white-space: normal;
+    color: #000 !important;
+}
+
+.izmlms-treenormal-disabled {
+    font-weight: 400 !important;
+    white-space: normal;
+    color: #ccc !important;
+}
+
+.izmlms-requiredlinktextpaneldiv {
+    display: inline !important;
+}
+
+.rgCollapse {
+    background: url("Images/Catalog/Collapse-19x19.png") no-repeat scroll 0 0 transparent;
+    border: 0;
+    cursor: pointer;
+    width: 15px;
+}
+
+.rgExpand {
+    background: url("Images/Catalog/Expand-19x19.png") no-repeat scroll 0 0 transparent;
+    border: 0;
+    cursor: pointer;
+    width: 15px;
+}
+
+.rgSortAsc {
+    background: url("Images/SortAsc.gif") no-repeat scroll 0 0 transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #f2781e;
+    text-decoration: underline;
+}
+
+.izmlms-EventSource td {
+    padding-right: 20px;
+}
+
+.hideforprint {
+    display: none;
+}
+
+.NormalTextBox {
+    color: #111;
+    margin-bottom: 0 !important;
+    padding: 2px !important;
+}
+
+.Normal label {
+    font-weight: normal;
+}
+
+.HideTextUsingFCC div {
+    border: 0 !important;
+    color: #ffc;
+}
+
+.HideTextUsingWhite div {
+    border: 0 !important;
+    color: #fff;
+}
+
+.rtLoadingIcon {
+    background-image: url("Images/LoadingIcon.gif");
+    float: left;
+    margin: 0;
+}
+
+.izmlms-icon16 {
+    border-width: 0;
+    margin: 7px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+#rblAdminTypes td {
+    max-width: 250px;
+}
+
+#rblAdminTypes label {
+    word-wrap: break-word;
+}
+
+.izmlms-StatusSelector td {
+    vertical-align: top;
+}
+
+.izmlms-StatusSelector .izmlms-StatusSelectorTD {
+    width: 195px !important;
+}
+
+.izmlms-StatusSelector .izmlms-StatusSelectorTR {
+    height: 20px !important;
+}
+
+.izmlms-NormalRadButton label {
+    font-weight: normal !important;
+}
+
+.izmlms-NormalRadButton.izmlms-indented label {
+    padding-right: 10px;
+}
+
+.dnnProfile .dnnFormItem .dnnFormVisibility li {
+    list-style-type: none !important;
+}
+
+.izmlms-GridIconColumn {
+    min-width: 24px !important;
+}
+
+.RadUpload .ruInputs li {
+    list-style: none !important;
+}
+
+.RadUploadProgressArea_Default .ruProgress li {
+    list-style: none outside none !important;
+}
+
+.RadUploadProgressArea_Default .ruShadow li {
+    list-style: none outside none !important;
+}
+
+.RadUploadProgressArea_Default .ruProgressHeader li {
+    list-style: none outside none !important;
+}
+
+.RadUploadProgressArea_Default .ruCurrentFile li {
+    list-style: none outside none !important;
+}
+
+.RadUploadProgressArea_Default .ruTimeSpeed li {
+    list-style: none outside none !important;
+}
+
+.RadUploadProgressArea_Default .ruTimeSpeed li {
+    list-style: none outside none !important;
+}
+
+.RadUpload .ruUploadProgress {
+    background: inherit !important;
+    padding-left: 0 !important;
+}
+
+.RadUploadProgressArea_Default .ruProgress .ruBar {
+    background-image: none !important;
+}
+
+    .RadUploadProgressArea_Default .ruProgress .ruBar div {
+        background-image: none !important;
+        background-color: #5392d4 !important;
+    }
+
+.RadUploadProgressArea_Default .ruProgress {
+    background-image: none !important;
+}
+
+.RadUploadProgressArea li.ruProgressHeader {
+    display: none !important;
+}
+
+.RadUploadProgressArea li.ruFilePortion {
+    margin-top: 20px !important;
+}
+
+.RadUploadProgressArea .ruProgress li.ruCurrentFile {
+    overflow: hidden !important;
+    padding-bottom: 5px !important;
+}
+
+.RadUpload .ruFileWrap {
+    width: 100% !important;
+    display: list-item !important;
+    overflow: visible !important;
+}
+
+#tableButtonLoad {
+    clear: both !important;
+}
+
+.ruFileWrap span.dnnInputFileWrapper > span.dnnSecondaryAction {
+    opacity: 0 !important;
+}
+
+.ruFileWrap span.dnnInputFileWrapper.dnnSecondaryAction {
+    opacity: 0 !important;
+}
+
+#lms-LESelector .ruFileWrap span.dnnInputFileWrapper.dnnSecondaryAction {
+    width: 100% !important;
+}
+
+.ruFileWrap span.dnnInputFileWrapper {
+    position: absolute !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    left: 0 !important;
+    width: 420px !important;
+    display: inline !important;
+    float: none !important;
+    list-style: none !important;
+}
+
+.Head {
+    font-size: 20px;
+    border-bottom: 0 !important;
+}
+
+#divSearch #search {
+    float: none !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+#divSearch td > input {
+    margin-bottom: 5px !important;
+    padding: 3px !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+#search span input {
+    margin: 0 !important;
+}
+
+.loadondemand .dnnCheckbox + span.rtIn {
+    position: relative !important;
+    left: -20px;
+}
+
+.loadondemand .rtChk + .dnnCheckbox {
+    position: relative !important;
+    left: -20px;
+}
+
+.RadTreeView_izmlms .dnnCheckbox {
+    margin: 0 6px 0 2px !important;
+    padding: 0;
+    width: 13px;
+    height: 13px !important;
+    z-index: 0;
+}
+
+.RadTreeView_izmlms div.RadTreeView .dnnCheckbox {
+    position: absolute;
+    _position: relative;
+}
+
+    .RadTreeView_izmlms div.RadTreeView .dnnCheckbox + div.rtIn {
+        position: relative;
+        left: 20px;
+    }
+
+.RadTreeView_izmlms .HeaderCells .dnnCheckbox, .RadTreeView_izmlms .HeaderCells .mark, .RadTreeView_izmlms .chkSelectAll .dnnCheckbox {
+    margin: 0 !important;
+    padding-top: 0 !important;
+}
+
+.RadTreeView_izmlms .rtPlus, .RadTreeView_izmlms .rtMinus {
+    top: 0 !important;
+}
+
+.RadComboBox_Default .rcbInput {
+    box-shadow: none !important;
+}
+
+.RadComboBox_izmlms .rcbInputCell .rcbInput {
+    height: 100% !important;
+    margin-top: 1px !important;
+    padding: 0 !important;
+    border-width: 0 !important;
+    box-shadow: none !important;
+}
+
+.RadComboBox_izmlms table td.rcbInputCell {
+    vertical-align: top !important;
+}
+
+.RadComboBox .rcbReadOnly td.rcbArrowCell a {
+    width: 18px;
+    background-repeat: no-repeat !important;
+}
+
+.ucLinkTypeRadioButtons .dnnRadiobutton {
+    display: inline-block !important;
+}
+
+.leeditpopup .RadTreeView_izmlms div.RadTreeView .SelectionCheckBox .dnnCheckbox {
+    position: relative !important;
+}
+
+.breadcrumbsdiv ul {
+    margin-left: 0 !important;
+}
+
+.dnnProfileDetails .dnnFormItem .dnnFormVisibility {
+    width: 10%;
+    float: left;
+}
+
+.dnnButtonIcon {
+    background: transparent url(../../images/visibility.png) no-repeat center;
+}
+
+.dnnProfileDetails .dnnFormItem input[type="text"] {
+    display: block;
+    float: left;
+    width: 300px !important;
+    margin-bottom: 8px !important;
+}
+
+.dnnProfileDetails .dnnFormItem select {
+    display: block;
+    float: left;
+    width: 308px !important;
+    margin-bottom: 8px !important;
+}
+
+.dnnProfileDetails .dnnFormItem .RadComboBox_Default input[type="text"] {
+    width: 100% !important;
+}
+
+.dnnPasswordDetails .dnnFormItem input[type="text"], .dnnFormItem input[type="password"] {
+    margin-bottom: 8px !important;
+}
+
+.dnnUserDetails .dnnFormItem input[type="text"], .dnnUserDetails .dnnFormItem select, .dnnUserDetails .dnnFormItem textarea, .dnnUserDetails .dnnFormItem input[type="email"] {
+    margin-bottom: 8px !important;
+}
+
+.dnnProfile .dnnFormRadioButtons {
+    clear: both !important;
+    float: none !important;
+    display: block !important;
+}
+
+.dnnProfile .RadComboBox_Default .rcbArrowCellRight {
+    width: 18px !important;
+}
+
+.dnnProfile .dnnFilePicker .dnnLeft .dnnFormItem select {
+    float: left;
+    width: 180px !important;
+}
+
+.dnnProfileDetails .dnnFormItem .dnnFormVisibility > ul {
+    background-color: #fff;
+    border: 1px solid #40e0d0;
+    padding: 5px;
+    position: absolute;
+    width: 200px;
+    z-index: 200;
+}
+
+.dnnProfileDetails .dnnFilePicker .dnnLeft .dnnFormItem {
+    width: 260px !important;
+}
+
+    .dnnProfileDetails .dnnFilePicker .dnnLeft .dnnFormItem span {
+        width: 60px !important;
+    }
+
+.lms-Popup_Content .dnnProfile .RadEditor, .lms-Popup_Content .dnnProfile .RadEditor table {
+    height: auto !important;
+}
+
+.lms-Popup_Content .dnnProfile div.dnnButtonDropdown {
+    height: 22px !important;
+    margin-left: 5px !important;
+}
+
+.lms-Popup_Content .dnnProfile div.dnnButtonIcon, .lms-Popup_Content .dnnProfile div.dnnButtonArrow {
+    height: 22px !important;
+}
+
+.izmlms-popup {
+    background: none repeat scroll 0 0 #fff !important;
+}
+
+.lms-Popup_Content {
+    width: 96% !important;
+    margin: auto;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-size: inherit;
+}
+
+.lms-SecSubTitle {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.lms-SubTitle {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.lms-H2 {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.lms-H2-ManagerTitle {
+    margin-bottom: 0 !important;
+}
+
+.lms-hr {
+    width: 100%;
+    height: 1px;
+    border: 0;
+    color: #292929;
+    background-color: #292929;
+    margin-top: 7px;
+}
+
+.lms-footer-buttons {
+    width: 96%;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+div.lms-MultipleControlsRightColumn {
+    width: 60%;
+    float: left;
+}
+
+    div.lms-MultipleControlsRightColumn span {
+        float: left;
+        margin-right: 5px;
+        margin-top: 4px;
+    }
+
+    div.lms-MultipleControlsRightColumn label {
+        float: left;
+        margin-right: 5px;
+        margin-top: 5px;
+        width: auto !important;
+    }
+
+.lms-MarginTop {
+    margin-top: 8px !important;
+}
+
+.lms-MarginBottom {
+    display: block;
+    margin-bottom: 10px !important;
+}
+
+.lms-RightDiv {
+    float: left;
+    width: 50%;
+}
+
+.lms-SmallTextbox {
+    width: 43px !important;
+    min-width: 43px !important;
+    margin-right: 3px !important;
+}
+
+.lms-SmallXTextbox {
+    width: 10% !important;
+    min-width: 10% !important;
+}
+
+.lms-MediumTextbox {
+    width: 20% !important;
+    min-width: 150px !important;
+}
+
+.lms-LargeTextbox {
+    width: 35% !important;
+    min-width: 250px !important;
+}
+
+.lms-LargeXTextbox {
+    width: 70% !important;
+}
+
+.lms-SmallXCombo {
+    width: 16% !important;
+    min-width: 150px !important;
+}
+
+.lms-SmallCombo {
+    width: 50px !important;
+    margin-right: 5px !important;
+        min-width: 50px !important;
+}
+
+.lms-SmallWidth {
+    width: 75px !important;
+    min-width: 75px !important;
+}
+
+.lms-LargeCombo {
+    width: 70% !important;
+}
+
+.lms-MediumCombo {
+    width: 35% !important;
+    min-width: 35% !important;
+}
+
+.lms-MediumComboII {
+    width: 25% !important;
+    min-width: 200px !important;
+}
+
+.lms-MediumComboIII {
+    width: 40% !important;
+    min-width: 350px !important;
+}
+
+.lms-MediumFixedCombo {
+    width: 100px !important;
+}
+
+.lms-Clear {
+    clear: both !important;
+}
+
+.lms-Nowrap {
+    white-space: nowrap !important;
+}
+
+.lms-rightalign {
+    text-align: right !important;
+}
+
+.lms-FloatNone {
+    float: none !important;
+}
+
+.lms-RightLabel {
+    margin-top: 5px !important;
+    text-align: left;
+    display: block;
+}
+
+.lms-Indented {
+    padding-left: 38px;
+}
+
+.lms-clearwidthlabel .dnnTooltip {
+    width: 100% !important;
+}
+
+.lms-clearwidthlabel .dnnLabel {
+    width: 100% !important;
+}
+
+.RadComboBox_izmlms .rcbInputCell .rcbInput {
+    margin-bottom: 0 !important;
+}
+
+#ctlMangerLEEdit_pnlSourceILT .RadComboBox_izmlms {
+    margin-left: 4px !important;
+}
+
+.lms-TR {
+    height: 28px;
+}
+
+.lms-TDLabel {
+    width: 30%;
+}
+
+.lms-TDControl {
+    padding-left: 16px !important;
+}
+
+.lms-controlDiv .urlControl {
+    float: left;
+    width: 60%;
+    padding: 5px 0 5px 0 !important;
+}
+
+.lms-FormCheckBoxWithText {
+    float: left;
+    width: auto;
+    display: block;
+    margin-bottom: 0 !important;
+    margin-top: 5px !important;
+    margin-right: 10px;
+}
+
+ .lms-FormCheckBoxWithText input[type=checkbox] {
+        float: none;
+ }
+
+.lms-FormCheckBoxWithText label {
+        font-weight: normal;
+        margin: 0 10px 0 4px;
+        width: auto;
+        text-align: left;
+        padding-right: 0;
+        float: none;
+        display: inline-block;
+}
+
+
+.lms-FormRadioButtonWithText {
+    float: left;
+    width: auto;
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+    .lms-FormRadioButtonWithText input[type=radio] {
+        float: none;
+    }
+
+    .lms-FormRadioButtonWithText label {
+        font-weight: normal;
+        margin: 0 10px 0 4px;
+        width: auto;
+        text-align: left;
+        padding-right: 0;
+        float: none;
+        display: inline;
+    }
+
+.lms-Checkbox input[type=checkbox] {
+    margin-top: 4px !important;
+}
+
+.dnnFormItem .lms-ControlContainer .lms-FormDropDownList {
+    margin-left: 32.075% !important;
+}
+
+#NoContentReportFiles {
+    margin-top: 5px;
+    display: block;
+    float: left;
+    font-size: inherit;
+}
+
+.izmlms-AutomaticImportReports-tbl {
+    width: 60%;
+    float: left;
+    margin-top: 5px;
+}
+
+.izmlms-AutomaticImportReports-div {
+    max-height: 90px;
+    overflow: auto;
+    margin-right: 6px;
+}
+
+.dnnFormItem .lms-ctrl-align {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 3px;
+}
+
+    .dnnFormItem .lms-ctrl-align label {
+        width: auto !important;
+    }
+
+div.lms-FormChecksList {
+    clear: both;
+    width: 100%;
+}
+
+    div.lms-FormChecksList label {
+        text-align: left !important;
+        white-space: nowrap;
+    }
+
+div.lms-FormChecksListIdent {
+    clear: both;
+    padding-left: 30px;
+    width: 100%;
+}
+
+    div.lms-FormChecksListIdent label {
+        text-align: left !important;
+        white-space: nowrap;
+    }
+
+.RadTreeView_izmlmsRole .rtChk {
+    float: none !important;
+}
+
+.rbUpload-align {
+    margin-right: 20px !important;
+}
+
+.dnnForm fieldset .lms-fieldset-with {
+    width: 65% !important;
+}
+
+span.dnnFormRequired:after, div.dnnFormItem.dnnFormRequired > div.dnnLabel span:after {
+    content: "*";
+    display: inline-block;
+    margin: 0 0 0 5px;
+    color: red;
+    font-size: 16px;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+.lms-StatusSelector {
+    font-weight: normal !important;
+    float: left;
+}
+
+    .lms-StatusSelector td {
+        vertical-align: top !important;
+    }
+
+.lms-FloatNone td {
+    width: 90px;
+}
+
+.lms-StatusSelector label {
+    font-weight: normal !important;
+    white-space: nowrap !important;
+}
+
+.lms-StatusSelector .lms-StatusSelectorFirstRow {
+    padding-top: 7px;
+    height: 15px;
+}
+
+.lms-EnrollmentMargin > div.dnnTooltip {
+    margin-top: 30px !important;
+}
+
+.lms-EnrollmentMargin > div.dnnLabel {
+    margin-top: 0;
+}
+
+.lms-MgrEnrollmentSearchDIV {
+    width: 100%;
+    height: 30px;
+    max-height: 30px;
+}
+
+.lms-MgrEnrollmentListAll {
+    width: 100%;
+    display: table-cell;
+}
+
+.lms-MgrEnrollmentSearch {
+    white-space: nowrap;
+    display: table-cell;
+}
+
+.lms-MgrEnrollment {
+    position:relative; 
+}
+
+   
+
+    .lms-MgrEnrollmentSearch a.CommandButton:link {
+        padding-top: 5px;
+    }
+
+.dnnLeft Label {
+    width: auto !important;
+}
+
+.dnnTooltip label {
+    color: #333 !important;
+}
+
+.lms-minmargin {
+    margin: 5px 14px 0 3px;
+}
+
+.lms-row-space {
+    margin-bottom: 3px;
+}
+
+.lms-top-space {
+    margin-top: 20px !important;
+}
+
+.lms-smallTop-space {
+    margin-top: 8px;
+}
+
+.dnnFormItem input[type="text"], .dnnFormItem select, .dnnFormItem textarea, .dnnFormItem input[type="email"], .dnnFormItem input[type="search"], .dnnFormItem input[type="password"] {
+    margin-bottom: 5px !important;
+    padding: 2px !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    font-size: inherit !important;
+}
+
+.dnnFormItem textarea {
+    min-width: 250px;
+}
+
+#maindiv td input[type="text"], #maindiv td select, #maindiv td textarea, #maindiv td input[type="email"], #maindiv td input[type="search"], #maindiv td input[type="password"] {
+    margin-bottom: 5px;
+    /*padding: 3px !important;*/
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+#maindiv td select {
+    margin-bottom: 0 !important;
+}
+
+/*.lms-Popup_Content .dnnFormItem input[type="checkbox"] {
+    margin-top:8px;
+}*/
+
+#maindiv td input[type="checkbox"], #maindiv td input[type="radio"] {
+    margin: 5px 3px 5px 5px !important;
+}
+
+    #maindiv td input[type="checkbox"] + label, #maindiv td input[type="radio"] + label {
+        font-weight: normal;
+    }
+
+.lms-ContainerMsg {
+    min-height: 0 !important;
+    padding: 0 !important;
+}
+
+    .lms-ContainerMsg > div.dnnLabel {
+        margin-top: 1px !important;
+    }
+
+    .lms-ContainerMsg > div.dnnTooltip {
+        margin-top: 1px !important;
+    }
+
+.lms-MarginBottomMsg {
+    margin-bottom: 5px;
+}
+
+.dnnForm fieldset .dnnFormItem {
+    padding: 2px 6px !important;
+}
+
+    .dnnForm fieldset .dnnFormItem.lms-ContainerMsg {
+        padding: 0 !important;
+    }
+
+.lms-lblURLType .urlControlLinkType span, .lms-lblURLType .dnnFormItem .urlControlLinkType span {
+    float: right !important;
+}
+
+.lms-RadComboType {
+    width: 45% !important;
+}
+
+.lms-Report_Title_TD {
+    width: 270px;
+}
+
+    .lms-Report_Title_TD h4 {
+        margin-bottom: 3px !important;
+    }
+
+.lms-Report_Combo_TD {
+    width: 230px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+    .lms-Report_Combo_TD select {
+        width: 100%;
+        white-space: nowrap;
+        margin-bottom: 5px !important;
+        padding: 3px !important;
+        -webkit-border-radius: 0 !important;
+        border-radius: 0 !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+.dnnFormItem span.dnnFormMessage.dnnFormError {
+    color: #fff !important;
+}
+
+#ctlMangerLEEdit_teDescription_OptRender, #ctlMangerLEEdit_teTextHtml_OptRender {
+    float: left !important;
+}
+
+#teDetails_OptRender, #teDescription_OptRender {
+    float: left !important;
+}
+
+.lms-bodyNotifications {
+    width: 350px !important;
+    margin: auto !important;
+}
+
+.RadTreeView_izmlms .rtLI label input, .RadTreeView_izmlms .rtLI label .rtChk {
+}
+
+.lms-learnerCboTeam {
+    float: right;
+    margin-right: 5px;
+    display: block !important;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#divLEarnerConfigPanels {
+    margin-top: 45px !important;
+}
+
+.lms-TableGrid {
+    width: 99%;
+    border-collapse: collapse;
+    margin-bottom: 0 !important;
+    border-spacing: 0 !important;
+    table-layout: fixed;
+    font-size: inherit;
+}
+
+.lms-TableGrid .dnnGridHeader td{
+    padding:6px !important;
+
+
+}
+
+.lms-RepeaterHeaderColumn {
+    white-space: nowrap;
+}
+
+.lms-RepeaterHeaderCenterColumn {
+    text-align: center;
+}
+
+.lms-RepeaterCenterColumn {
+    text-align: center;
+}
+
+.lms-RepeaterHeaderIconColumn {
+    text-align: center;
+    padding-left: 0 !important;
+    white-space: nowrap;
+    width: 40px;
+}
+
+.lms-Messagebox .dnnForm .dnnFormItem {
+    padding-top: 6px !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.lms-TDPadding0 table tbody tr td {
+    padding: 0 !important;
+}
+
+.lms-displayNone {
+    display: none !important;
+}
+
+#PrerequisiteMessageBox .lms-Messagebox .dnnFormMessage {
+    margin-bottom: 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.lms-Config_License {
+    white-space: normal !important;
+    line-height: inherit !important;
+    float: left;
+    width: 60%;
+}
+
+    .lms-Config_License ul {
+        white-space: normal !important;
+    }
+
+.lms-H4 {
+    margin-top: 15px !important;
+}
+
+.lms-TextEditorLabel .dnnForm .dnnFormItem a.dnnFormHelp span {
+    text-align: right !important;
+}
+
+.lms-TextEditorLabel .dnnTextEditor .dnnTextPanelView .dnnlabel label {
+    opacity: 0 !important;
+}
+
+.lms-TextEditorLabel .dnnTextEditor .dnnTextPanelView .dnnFormHelp {
+    display: none !important;
+}
+
+.lms-TextEditorLabel .dnnTextPanelView {
+    margin-bottom: 2px !important;
+    margin-left: 0 !important;
+    margin-right: 6px !important;
+    background-color: transparent !important;
+    border: 0 !important;
+}
+
+.lms-TextEditorLabel div.dnnTextEditor div.dnnFormItem > .dnnTooltip {
+    opacity: 0 !important;
+}
+
+    .lms-TextEditorLabel div.dnnTextEditor div.dnnFormItem > .dnnTooltip label .dnnFormHelp {
+        display: none !important;
+    }
+
+.lms-TextEditorLabel .dnnTextPanelView .dnnLabel {
+    display: inline-block !important;
+    float: left !important;
+    position: relative !important;
+    width: 33.075% !important;
+    padding-right: 20px !important;
+    margin-right: 18px !important;
+    overflow: visible !important;
+    text-align: right !important;
+}
+
+.lms-TextEditorLabel .dnnFormItem {
+    width: 97% !important;
+}
+
+    .lms-TextEditorLabel .dnnFormItem textarea {
+        max-width: 99% !important;
+        width: 99% !important;
+    }
+
+.lms-TextEditorLabel .reToolbar span.ApplyClass {
+    width: 95px !important;
+}
+
+.lms-TextEditorLabel .RadEditor {
+    width: 75% !important;
+    margin: auto !important;
+}
+
+#prereq_Search #search {
+    display: block !important;
+    float: left !important;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+#prereq_Search input {
+    float: left !important;
+}
+
+.lms-RadioInTable span.dnnFormRadioButtons {
+    padding: 0 !important;
+}
+
+.lms-PaddingLeft {
+    padding-left: 15px;
+}
+
+.izmlms-nocontentBulb {
+    margin-bottom: 15px;
+}
+
+.ReportToolbar input, select {
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.lms-ReportContainer .dnnPrimaryAction {
+    margin-bottom: 5px !important;
+}
+
+.dnnPrimaryAction {
+    color:#ffffff !important;
+}
+
+.izmlms-tabs {
+    font-weight: normal !important;
+}
+
+.lms-Popup_Content .RadPicker table.rcTable {
+    position: absolute !important;
+    width: 160px !important;
+}
+
+#divTreeManagerEnrollment .RadTreeView_izmlms .ACT {
+    font-weight: normal !important;
+}
+
+.RadPicker,.RadComboBoxDropDown .rcbItem, .RadComboBoxDropDown .rcbHovered,.RadGridEditable .rgRow input, .RadGridEditable .rgRow select,.RadGridEditable .rgRow .riSingle .riTextBox,.RadGridEditable .rgAltRow input, .RadGridEditable .rgAltRow select,.RadGridEditable .rgAltRow .riSingle .riTextBox,
+.RadGridTable .rgRow input, .RadGridTable .rgRow select,.RadGridTable .rgRow .riSingle .riTextBox {
+    height: 25px !important;
+    font-size:inherit !important;
+    box-sizing: border-box;
+}
+
+.RadGridEditable .rgRow .riTextBox,.RadGridEditable .rgFilterRow .riSingle .riTextBox,.RadGridEditable .rgAltRow .riTextBox {
+    min-width:80px;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+
+.lms-ColumnsDL {
+    width: 97%;
+    border: 1px solid #ccc;
+    display: inline-block;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+    .lms-ColumnsDL > span {
+        white-space: nowrap !important;
+        display: inline-block;
+        width: 25%;
+        min-width: 130px !important;
+        float: left;
+        border: none !important;
+        padding: 0;
+    }
+
+    .lms-ColumnsDL br {
+        display: none;
+    }
+
+    .lms-ColumnsDL br {
+        content: " ";
+    }
+
+        .lms-ColumnsDL br:after {
+            content: " ";
+        }
+
+    .lms-ColumnsDL .lms-DL_CheckCol {
+        background-color: #f0f0f0;
+        float: left;
+        padding: 7px;
+    }
+
+ .lms-ColumnsDL .lms-DL_CheckCol input[type="checkbox"] {
+     margin: 0 !important;
+ }
+
+.lms-ColumnsDL .lms-DL_NameCol {
+    background-color: transparent;
+    float: left;
+    padding-top: 7px;
+    padding-left: 3px;
+}
+
+.lms-ReportH3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#izmlms-menubar-nav td a {
+    font-weight: bold !important;
+}
+
+.izmlms-popup #content_TextHtml {
+    padding: 9px !important;
+}
+
+.ruFileWrap span.dnnInputFileWrapper > span.dnnSecondaryAction {
+    height: 10px !important;
+}
+
+.ruFileWrap span.dnnInputFileWrapper.dnnSecondaryAction {
+    height: 10px !important;
+}
+
+.lms-RadioInSocial span.dnnFormRadioButtons {
+    padding: 1px !important;
+}
+
+.lms-Popup_Content input[type="checkbox"] + label, .lms-GeneralContent input[type="checkbox"] + label, .lms-GeneralContent input[type="radio"] + label {
+    width: auto !important;
+    text-align: left;
+    padding-left: 3px;
+    font-weight: normal;
+}
+
+.lms-Popup_Content ul.dnnActions, .lms-GeneralContent ul.dnnActions {
+    border-top: none !important;
+    padding-bottom: 18px;
+   /*padding-top:0px;*/ 
+}
+
+.lms-Popup_Content ul.dnnActions li, .lms-GeneralContent ul.dnnActions li {
+    margin-right: 5px;
+}
+
+#grdRoles input[type="image"] {
+    background: inherit !important;
+    box-shadow: inherit !important;
+}
+
+.lms-Popup_Content .dnnTooltip span.dnnHelpText {
+    color: #085b8f !important;
+    font-weight: normal;
+}
+
+.lms-Popup_Content .dnnLabel .dnnTooltip span.dnnHelpText {
+    color: #ddd !important;
+    font-weight: normal;
+}
+
+#TeamMemberStatusPanels {
+    min-width: 100% !important;
+}
+
+    #TeamMemberStatusPanels input[type="radio"] + label {
+        width: auto !important;
+        text-align: left;
+    }
+
+.lms-ContainerMsg > .dnnLabel {
+    height: 0 !important;
+}
+
+.RadGrid_Default .rgRow td, .RadGrid_Default .rgAltRow td, .RadGrid_Default .rgEditRow td, .RadGrid_Default .rgFooter td {
+    border-width: 0 0 0 !important;
+}
+
+.izmlms-popup .ui-widget-overlay {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.lms-CenterAlignButton {
+    width: 50%;
+}
+
+    .lms-CenterAlignButton .dnnActions {
+        padding-top: 0 !important;
+    }
+
+.dnnForm {
+    min-width: inherit !important;
+}
+
+#lms-Messages .lms-Messagebox .dnnForm {
+    width: 96% !important;
+    margin: auto;
+}
+
+    #lms-Messages .lms-Messagebox .dnnForm .dnnFormItem .dnnFormMessage {
+        max-width: none !important;
+    }
+
+a.dnnSecondaryAction:hover, a.dnnPrimaryAction:hover {
+    text-decoration: none;
+}
+
+.RadComboBox_izmlms a.dnnSecondaryAction {
+    padding: 6px;
+}
+
+#actions {
+    height:30px;
+   
+}
+
+#actions a.dnnSecondaryAction {
+    outline: none;
+    color: #333;
+    /*font-size: 14px;*/
+}
+
+/*.col-sm-12 #actions a.dnnSecondaryAction {
+    width: 98px;
+    
+}*/
+
+#actions ul li {
+    /*width: 102px;
+    margin-right:15px;*/
+}
+
+#actions ul li:first-child {
+    /*width: 98px;*/
+    margin-left: 0px;
+}
+
+#actions ul.dnnActions {
+    float:left;
+}
+
+.lms-GeneralContent #actions ul.dnnActions{
+    padding-top:0;
+
+}
+
+.lms-GeneralContent #actions ul.dnnActions .dnnSecondaryAction.aspNetDisabled:hover{
+    background-color:inherit !important;
+    border-color: rgb(204, 204, 204) !important;
+    cursor: not-allowed !important;
+}
+
+
+.lms-GeneralContent .PagingTable, .lms-Popup_Content .PagingTable {
+    margin-top:5px; 
+}
+
+.lms-GeneralContent .PagingTable td[align="right"], .lms-Popup_Content .PagingTable td[align="right"]{
+    padding-left:10px; 
+}
+
+
+ul.dnnActions li a {
+   /* line-height: 21px;*/
+    margin-bottom: 10px;
+}
+
+#actions ul.dnnActions li a {
+   line-height: 21px;
+}
+
+    ul.dnnActions li a.dnnSecondaryAction, #lnkShowLearners,#lnkHideLearners {
+        color: inherit;
+    }
+
+.rtBot label {
+    line-height: inherit !important;
+    margin-left: 0 !important;
+}
+
+.lms-GeneralContent #actions ul.dnnActions .dnnSecondaryAction.aspNetDisabled:hover{
+    background-color:inherit !important;
+    border-color: rgb(204, 204, 204) !important;
+    cursor: not-allowed !important;
+}
+
+.ResourceDropDown .rcbInputCell input {
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background-color: transparent !important;
+}
+
+.lms-dnnFormItem_Height {
+    height: 30px;
+}
+
+.RadComboBox table td.rcbInputCell {
+  /*  padding: 0 4px 2px 3px !important;*/
+}
+
+.RecurrenceEditor ul li {
+    list-style: none outside none !important;
+}
+
+.lms-ulExportItems {
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-bottom: 0;
+}
+
+    .lms-ulExportItems li {
+        margin-right: 5px;
+        list-style: none;
+        float: left;
+    }
+
+.lms-Popup_Content .RadGrid .rgMasterTable .RadPicker table.rcTable {
+    position: relative !important;
+    width: auto !important;
+}
+
+.lms-Popup_Content .RadGrid .rgMasterTable .rgEditRow .riTextBox[type="text"] {
+    width: 90px !important;
+}
+
+.lms-Popup_Content .RadGrid .rgAltRow .rgSorted {
+    border-bottom-color: #fff;
+    background-color: #fff;
+}
+
+.lms-Popup_Content .RadGrid .rgRow .rgSorted {
+    border-bottom-color: #dfdfdf;
+    background-color: #dfdfdf;
+}
+
+.lms-Popup_Content .RadGrid .rgMasterTable .rgEditRow div.RadPicker table.rcSingle .rcInputCell {
+    width: auto !important;
+}
+
+.lms-Popup_Content .RadGrid .rgMasterTable .rgEditRow .RadPicker {
+    width: 140px !important;
+}
+
+.lms-Popup_Content .dnnPrimaryAction[disabled], .lms-Popup_Content .dnnPrimaryAction[disabled]:hover, .lms-Popup_Content.dnnPrimaryAction[disabled]:active {
+    background: #ccc !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    color: #aaa !important;
+    text-shadow: none;
+    cursor: not-allowed;
+}
+
+.lms-Popup_Content .dnnSecondaryAction[disabled], .lms-Popup_Content .dnnSecondaryAction[disabled]:hover, .lms-Popup_Content .dnnSecondaryAction[disabled]:active {
+    background: #ccc !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    color: #aaa !important;
+    text-shadow: none;
+    cursor: not-allowed;
+}
+
+.lms-CommantItemBar {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    clear: both;
+}
+
+.lms-withOutBorder {
+    border: none !important;
+}
+
+#tblLETypes td:first-of-type{
+    width:45px;
+} 
+
+#tblLETypes td ul{
+    margin-bottom: 0 !important;
+    list-style: none !important;
+    margin-left: 5px !important;
+    height: 42px;
+}
+
+#tblLETypes td ul li{
+    height:18px;
+    list-style-type: none;
+}
+
+#tblLETypes td ul li span{
+    line-height: 15px;
+    display: inline-block;
+}
+
+#tblLETypes td img{
+    margin-left:5px;
+}
+
+.lms-TableGrid tr.dnnGridItem td.lms-RepeaterLeftColumn div {
+    height: 100%;
+    display: inline-block;
+}
+
+#tblLETypes td ul:hover li a{
+    text-decoration:underline; 
+    color:#00a1de; 
+}
+
+
+#tblLETypes td ul li a:hover{
+    color:#00a1de; 
+}
+
+#tblLETypes .dnnGridItem:hover {
+    background-color: #f8f8f8;
+    cursor:pointer;
+}
+
+
+.lms-CommantItemBar_ButtonDiv {
+    width: 35%;
+    
+}
+
+.lms-CommantItemBar_CheckboxDiv {
+    width: 40%;
+    padding-top: 5px;
+}
+
+.lms-CommantItemBar_ExportIconsDiv {
+    width: 20%;
+}
+
+.lms-DnnActionRadGrid,.lms-DnnActionRadGrid li {
+    padding-top: 9px !important;
+}
+
+.lms-GridHeaderLinkButton {
+    color: #767676 !important;
+}
+
+.lms-RosterTextboxInvalid {
+    border-color: #c30f0f !important;
+    color: #c30f0f !important;
+}
+
+.lms-RosterDisabled {
+    color: #ccc !important;
+    cursor: not-allowed;
+}
+
+#BottomCommantItemBar_chkAvailableCandidatesPanel {
+    display: inline !important;
+}
+
+#BottomCommantItemBar_chkClipboardCandidatesPanel {
+    display: inline !important;
+}
+
+.lms-Popup_Content [id$="rgdSessions"] {
+    width:100% !important;
+}
+
+.lms-Popup_Content [id$="rgdSessions"] .rgMasterTable{
+    table-layout:fixed !important; 
+}
+
+.lms-Popup_Content [id$="rgdSessions"] tr.rgCommandRow {
+    background: none !important;
+}
+
+/*dnn_ctr415_LEILTViewSessionsControl_rgdSessions_ctl00_ctl02_ctl02_RNTBF_MinClassSize_wrapper*/
+
+.lms-Popup_Content [id$="rgdSessions"] .rgFilterRow span[id$="MinClassSize_wrapper"] , .lms-Popup_Content [id$="rgdSessions"] .rgFilterRow span[id$="MaxClassSize_wrapper"], .lms-Popup_Content [id$="rgdSessions"] .rgFilterRow span[id$="Registered_wrapper"], .lms-Popup_Content [id$="rgdSessions"] .rgFilterRow span[id$="Waitlisted_wrapper"]{
+    width:75% !important;
+}
+
+.lms-Popup_Content [id$="rgdSessions"] tr td:first-child {
+    line-height: 14px;
+    white-space: nowrap;
+   /*  width: 35px;*/
+}
+
+.lms-BulkImportDatalist {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.lms-BulkImportDatalistTR {
+    white-space: nowrap;
+    height: 25px;
+    width: 100%;
+}
+
+.lms-BulkImportDatalistLeftCol {
+    white-space: nowrap;
+    text-align: right;
+    width: 35%;
+}
+
+.lms-BulkImportDatalistRightCol {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.lms-BulkImportDatalistDropDown {
+    width: 170px;
+}
+
+#dateStartTime_timeView_wrapper, #dateEndTime_timeView_wrapper {
+    overflow-x: hidden !important;
+    width: 135px;
+}
+
+#dateStartTime_timeView_tdl, #dateEndTime_timeView_tdl {
+    width: 120px;
+}
+
+div#lmsRecurrenceContainer #AppointmentRecurrenceEditor input, #AppointmentRecurrenceEditor li {
+    float: left;
+}
+
+div#lmsRecurrenceContainer .rsAdvRecurrenceRangePanel {
+    padding: 5px !important;
+    margin-bottom:10px;
+}
+
+div#lmsRecurrenceContainer .rsAdvPatternPanel {
+    padding: 5px !important;
+}
+
+
+.lms-Popup_Content .riSingle .riTextBox, .lms-Popup_Content .riSingle .riContentWrapper {
+    max-height: 25px;
+    font-size: inherit !important;
+}
+
+div#lmsRecurrenceContainer .RecurrenceEditor .rsAdvWeekly_WeekDays li {
+    min-width: 120px;
+}
+
+    div#lmsRecurrenceContainer .RecurrenceEditor .rsAdvWeekly_WeekDays li .rsAdvCheckboxWrapper label {
+        font-weight: normal !important;
+    }
+
+div#lmsRecurrenceContainer #AppointmentRecurrenceEditor .rsRecurrenceOptionList li {
+    width: 120px;
+    border-right: 1px solid #ababab;
+}
+
+div#lmsRecurrenceContainer #AppointmentRecurrenceEditor_RecurrenceCheckboxPanel {
+    height: 24px;
+}
+
+div#lmsRecurrenceContainer .RecurrenceEditor .rsAdvPatternPanel {
+    width: 380px;
+    padding-left: 12px;
+}
+
+div#lmsRecurrenceContainer #AppointmentRecurrenceEditor label {
+    font-weight: normal;
+}
+
+div#lmsRecurrenceContainer #AppointmentRecurrenceEditor .rsAdvRadio {
+    float: left;
+}
+
+div#lmsRecurrenceContainer #AppointmentRecurrenceEditor .RadComboBox td.rcbInputCell input {
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    border: 0 solid;
+}
+
+div#lmsRecurrenceContainer #AppointmentRecurrenceEditor_RepeatFrequencyHourly, div#lmsRecurrenceContainer #AppointmentRecurrenceEditor label[for="AppointmentRecurrenceEditor_RepeatFrequencyHourly"] {
+    display: none;
+}
+
+div#lmsRecurrenceContainer #AppointmentRecurrenceEditor_RecurrencePanel {
+    margin-bottom: 5px;
+}
+
+div#lmsRecurrenceContainer #AppointmentRecurrenceEditor_RecurrencePatternPanel {
+    margin: 0 0 5px !important;
+    padding-bottom: 0;
+}
+
+div#lmsRecurrenceContainer #AppointmentRecurrenceEditorPanel {
+    display: inline-block !important;
+    width: 60% !important;
+}
+
+div#lmsRecurrenceContainer .RecurrenceEditor .rsTimePick {
+    width: auto !important;
+}
+
+    div#lmsRecurrenceContainer .RecurrenceEditor .rsTimePick input.riEnabled {
+        width: 95px;
+    }
+
+#izmlms_treeDiv .RadTreeView .rtTop, #izmlms_treeDiv .RadTreeView .rtMid, #izmlms_treeDiv .RadTreeView .rtBot, #izmlms_treeDiv-Team .RadTreeView .rtTop, #izmlms_treeDiv-Team .RadTreeView .rtMid, #izmlms_treeDiv-Team .RadTreeView .rtBot {
+    height: 21px;
+}
+
+#izmlms_treeDiv .RadTreeView .rtIn {
+    margin-left: 4px !important;
+}
+
+.ruFileWrap .ruButton, .ruInputs .ruButton {
+    padding: 0 !important;
+}
+
+.urlControlFile .dnnSecondaryAction, #ctlMangerLEEdit_ctlUrl_FileRow .dnnSecondaryAction, #ctlMangerLEEdit_urlPdf_FileRow .dnnSecondaryAction {
+    padding: 4px !important;
+}
+
+#teDescription_teDescription_contentIframe {
+    height: auto !important;
+}
+
+#lmsReportTranscriptContainer {
+    width: 90%;
+    margin: auto;
+    padding-top: 25px;
+}
+
+    #lmsReportTranscriptContainer .lms-CommantItemBar_ExportIconsDiv {
+        width: 100% !important;
+        margin-bottom: 5px;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    #lmsReportTranscriptContainer div.dnnFormItem > div.dnnLabel {
+        padding-right: 0;
+    }
+
+.lms-Summary {
+    width: 100%;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+#resultDivBulkImport {
+    width: 99%;
+}
+
+.lms-Summary .izmlms-failure li, .lms-Summary span, .lms-Summary li {
+    margin-left: 16px;
+}
+
+.lms-Summary span {
+    margin-left: 19px;
+}
+
+#summaryTitle {
+    margin-left: 16px;
+    font-weight: bolder;
+}
+
+.lms-WithoutTop {
+    margin-top: 0 !important;
+}
+
+#AppointmentRecurrenceEditor_RangeEndDate_wrapper {
+    display: inline-flex !important;
+}
+
+#ctlMangerCompletionEvents_ctlRoleAward_pnlRoleAwardListPanel, #ctlMangerCompletionEvents_ctlHttpRequest_pnlHttpRequestPanel {
+    width: 99% !important;
+}
+
+div#pnlHttpRequestEditList {
+    width: 99% !important;
+}
+
+.lmsInlineMessage div.lms-Messagebox .dnnForm {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+    .lmsInlineMessage div.lms-Messagebox .dnnForm .dnnFormMessage {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+.lmsLESelector .RadUpload .ruFileWrap .ruButton {
+    width: 75px;
+}
+
+.lmsLESelector .RadUploadProgressArea .ruProgress li.ruCurrentFile {
+    overflow: hidden !important;
+    padding-bottom: 5px !important;
+}
+
+.lmsLESelector .RadUpload .ruFileWrap .ruFakeInput {
+    width: 340px !important;
+    height: 16px !important;
+    padding: 3px !important;
+}
+
+[id$="ManagerLEEdit_ctlSection_txtFile1file0"] {
+    width: 100% !important;
+    cursor: pointer;
+}
+
+.lms-BulkImportUpload .RadUploadProgressArea .ruProgress li.ruCurrentFile {
+    overflow: hidden !important;
+    padding-bottom: 5px !important;
+}
+
+.lms-BulkImportUpload .RadUpload .ruFileWrap .ruFakeInput {
+    width: 340px !important;
+}
+
+.lms-MenuBar .dnnForm ul.dnnAdminTabNav {
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+    height:auto;
+}
+
+.lms-MenuBar .dnnForm ul.dnnAdminTabNav .ui-state-active a {
+    border-color: #C2C2C2 #C2C2C2 #fff;
+    margin-bottom: -1px;
+}
+
+
+@media handheld,only screen and (max-width:800px) {
+    .lms-MenuBar .dnnForm ul.dnnAdminTabNav li.ui-state-default a {
+        border: 1px solid #c2c2c2;
+    }
+}
+
+#lmsHelpBox {
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+
+    #lmsHelpBox ul {
+        list-style-type: disc;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+
+        #lmsHelpBox ul li {
+            list-style-type: disc !important;
+        }
+
+.imgHelpButton_Hover {
+    opacity: .7;
+    cursor: help;
+}
+
+#imgHelpButton {
+    opacity: 1;
+}
+
+#lmsHelpBox .lmsHelpBoxLinksAbove {
+    width: 100%;
+    padding-bottom: 12px;
+    clear: both;
+}
+
+#lmsHelpBox .lmsHelpBoxLinksBelow {
+    width: 100%;
+    clear: both;
+}
+
+#lmsHelpBox .lmsHelpBoxLinksAbove .lmsHelpLink {
+    float: right;
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    text-align: right;
+}
+
+#lmsHelpBox .lmsHelpBoxLinksAbove .lmsHelpMessage {
+    width: 99%;
+}
+
+#lmsHelpBox .lmsHelpBoxLinksBelow .lmsHelpLink {
+    float: right;
+    position: absolute;
+    bottom: 6px;
+    right: 12px;
+    text-align: right;
+}
+
+li.lmsHelpLi {
+    float: right !important;
+    padding-top: 8px;
+    padding-right: 10px;
+}
+
+.RadGridTable {
+    border: 1px solid #828282;
+    background-color: #fff;
+    color: #333;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    line-height: 16px;
+    width: 98%;
+}
+
+    .RadGridTable .rgMasterTable {
+        font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .RadGridTable .rgHeader {
+        padding-top: 5px;
+        padding-bottom: 4px;
+        text-align: left;
+        font-weight: normal;
+        border: 0;
+        border-bottom: 1px solid #828282;
+        background: #eaeaea repeat-x url('images/RgHeaderBkg.gif');
+        color: #333;
+    }
+
+    .RadGridTable .rgRow td {
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-color: #fff;
+    }
+
+    .RadGridTable .rgMasterTable {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .RadGridTable .rgRow, .RadGridTable .rgHeader {
+        cursor: default;
+    }
+
+        .RadGridTable .rgRow td, .RadGridTable .rgHeader {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+
+.lms-Popup_Content .RadGridTable .RadPicker table.rcTable {
+    position: relative !important;
+}
+
+.RadGridTable .rgRow td {
+    padding-top: 4px;
+    padding-bottom: 3px;
+}
+
+ul.rsAdvWeekly_WeekDays {
+    float: left;
+}
+
+.RadInput_Default, .RadPicker_Default {
+    display: inline-block;
+    margin-bottom: 5px; 
+    
+}
+
+.lms-Popup_Content .dnnLabel + span {
+    white-space: inherit !important;
+}
+
+.lmsAlertUL {
+    margin-bottom: 0;
+}
+
+#rgdRoster .rgFilterRow td {
+    border-bottom: none !important;
+}
+
+#rgdRoster .rgFilterRow input {
+    padding: 1px 2px 0 0;
+}
+
+#RosterPanels .pnlGrid {
+    overflow-x: auto;
+}
+
+#RosterPanels .pnlGrid .RadGrid_izmlms{
+   min-width: 1084px;
+}
+
+#RosterPanels #lmsFirstLine div {
+    min-width:120px;
+}
+
+#RosterPanels #lmsSecondLine div {
+    min-width:180px;
+}
+
+.lms-UploadControl {
+    background-color: #f0f0f0;
+    padding: 6px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+    .lms-UploadControl .RadUpload_Default .ruStyled .ruFileInput {
+        left: 0;
+    }
+
+    .lms-UploadControl .ruInputs .ruBrowse {
+        font-weight: normal;
+        left: 0;
+        width: 120px;
+    }
+
+    .lms-UploadControl .ctlUploadControl .dnnFormItem .divImageFolder {
+        left: 55%;
+        position: absolute;
+        width: 45%;
+        max-width: 140px;
+        max-height: 110px;
+    }
+
+        .lms-UploadControl .ctlUploadControl .dnnFormItem .divImageFolder #imgFolder {
+            max-width: 175px;
+            max-height: 135px;
+        }
+
+    .lms-UploadControl .ctlUploadControl .ruFakeInput {
+        display: none !important;
+    }
+
+.lms-GeneralContent .lms-MenuBar {
+    height:auto;
+}
+
+
+.lms-DisplayNone {
+    display: none !important;
+}
+
+.lmsReportCriteria {
+    margin-top: 5px;
+    clear: both;
+}
+
+#divMessagePopupMobile {
+    font-size: 5vh;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    font-family: Arial,Helvetica,sans-serif;
+    margin: 0 2% 0 auto;
+    width: 98%;
+}
+
+    #divMessagePopupMobile #btnReload {
+        width: 50%;
+        height: 50%;
+        visibility: hidden;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+.lms-GeneralContent {
+    text-align: left;
+   
+}
+
+.izmlms-popup #ajaxLoadingPaneldivBulkImport {
+    top: inherit !important;
+}
+
+.izmlms-popup .individualWeightInput {
+    padding: 5px 5px 0 0;
+}
+
+div.lms-GeneralContent div#DivDrillDown {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.lms-cmbDrilldown {
+    background-color: #fff;
+    color: #111;
+    height: 25px;
+    max-width: 90%;
+}
+
+span[id$="ChartDefault_Chart_ctlBreadCrumb_lblTeam"] {
+    display: none;
+}
+
+.lms-GeneralContent #ifrOpensesame {
+    height: 700px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.lms-GeneralContent #dvOpensesame h2.dnnFormSectionHead {
+    margin-bottom: 0 !important;
+}
+
+div[id$="ReportDefault_Report_Configuration_ctlDateRange_tdDrpDownDateRange"] {
+    width: 16% !important;
+    float: left;
+    margin-left: 3%;
+    margin-right: 5px;
+}
+
+    div[id$="ReportDefault_Report_Configuration_ctlDateRange_tdDrpDownDateRange"] select {
+        min-width: 110px !important;
+    }
+
+#divSummItemCount {
+    margin-left: 3%;
+}
+
+select[id$="ReportDefault_Report_Configuration_ctlDateRange_cmbDateRange"] {
+    width: 100% !important;
+}
+
+div#divOpensesame div#dvOSButtons {
+    padding: 0 !important;
+}
+
+div#dvReturn ul {
+    padding-top: 0 !important;
+}
+
+input[id$="ReportDefault_Report_Configuration_txtSummItemCount"] {
+    margin-right: 5px;
+}
+
+div[id$="Config_OpensesamePanels"] fieldset {
+    margin-bottom: 8px;
+}
+
+div[id$="fsOpensesame"] ul.dnnActions.dnnClear {
+    margin-top: 10px;
+}
+
+.ui-dialog-buttons.dnnClear:not([style*='top']) {
+    top: 30% !important;
+    left: 30% !important;
+    margin: 0 auto;
+    min-width: 400px;
+    position: fixed;
+}
+
+.dnnSecondaryAction.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.dnnConfirmCancel {
+    background: rgba(0,0,0,0) -moz-linear-gradient(center top,#f5f5f5 0%,#dfdfdf 100%) repeat scroll 0 0 !important;
+    background: linear-gradient(to bottom,#f5f5f5 0%,#dfdfdf 100%) !important;
+    background: -webkit-linear-gradient(center top,#f5f5f5 0%,#dfdfdf 100%) !important;
+}
+
+.row [class*="Pane"] {
+    padding: 0 !important;
+}
+
+#header_search #Search_ThirdContainer {
+    position: absolute;
+    right: -7px;
+}
+
+#header_search #Search_ThirdContainer .InputSearch{
+    width: 175px;
+}
+
+#header_search #Search_FirstContainer, #header_activeTeam_search #Search_SecondContainer {
+    float: left;
+    margin-right: 10px;
+}
+
+#search::before {
+    content: url('images/search.png');
+}
+
+.InputSearch {
+    float: left;
+    margin-left: 3px;
+    line-height: 18px;
+    border: 1px solid #ccc;
+}
+
+#header_search #search {
+    display: block;
+    float: right;
+    padding: 3px;
+    height: inherit;
+}
+
+#header_activeTeam_search {
+    display: block;
+    height: 28px;
+    width: 100%;
+}
+
+#treeMyTeam {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.izmlms-managertitlebar {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.izmlms-breadcrumbscontent div[id$="dvTitle"] div[id$="divTeam"] {
+    float: right;
+}
+
+.izmlms-breadcrumbscontent div[id$="dvTitle"] {
+    float: left;
+    width: 100%;
+    margin-bottom:10px;
+}
+
+.izmlms-breadcrumbscontent div[id$="dvTitle"] .izmlms-breadcrumbstitlediv {
+        float: left;
+        padding-top: 4px;
+        padding-bottom: 5px;
+}
+
+div[id$="rcbTeams"] table {
+    margin-bottom: 2px;
+}
+
+.lms-totalWidth {
+    width: 100%;
+}
+
+#header_activeTeam_search .izmlms-breadcrumbscontent {
+    width: auto;
+    margin-right:4px;
+}
+
+#header_search .lms-MgrEnrollmentListAll {
+    /*display: none;*/
+}
+
+div[id$="ManagerLECatalog_ctlLOTreeGrid_divTree"] {
+    margin-top: 12px;
+}
+
+#divControlls .loadondemand .rtFirst .rtTop .rtIn {
+    height: 20px;
+    line-height: 20px;
+}
+
+#divControlls .loadondemand .rtFirst .rtUL .rtLI .rtTop .rtIn {
+    height: inherit;
+    line-height: inherit;
+}
+
+.dnn_layout {
+    width: 100% !important;
+    max-width: 1170px;
+}
+
+#footer1 {
+    float: left;
+    width: 100%;
+}
+
+div[id$="ManagerLECatalog_ctlLOTreeGrid_divTreePanel"]:nth-child(2) {
+    display: none !important;
+}
+
+[id$="ManagerLECatalog_cmdRemove"].aspNetDisabled {
+    opacity: .5;
+}
+
+#Search_ThirdContainer {
+    display: none;
+}
+
+    #Search_ThirdContainer #search {
+        width: inherit;
+        height: 25px;
+    }
+
+#divSearch_prereq #Search_ThirdContainer_prereq {
+    float: right;
+    width: 225px;
+}
+
+    #divSearch_prereq #Search_ThirdContainer_prereq #search {
+        float: right;
+        height: 20px;
+        padding: 2px;
+        width: 20px;
+    }
+
+    #divSearch_prereq #Search_ThirdContainer_prereq .InputSearch {
+        display: block;
+        float: left;
+        width: 190px;
+    }
+
+    #divSearch_prereq #Search_ThirdContainer_prereq label {
+        display: none;
+    }
+
+#cwd {
+    margin-top: 7px;
+}
+
+#cwd .dnnLabel {
+    margin-top:0 !important;
+}
+
+[id$="LEILTEditSessionsControl_AppointmentRecurrenceEditor_RecurrencePanel"] .rsAdvRecurrencePatterns input[type="text"], [id$="LEILTEditSessionsControl_AppointmentRecurrenceEditor_RecurrencePanel"] .rsAdvRecurrencePatterns input[type="radio"] {
+    margin: 0 !important;
+    padding: 2px !important;
+    margin-bottom: 0 !important;
+}
+
+[id$="LEILTEditSessionsControl_AppointmentRecurrenceEditor_RecurrencePanel"] .rsAdvRecurrencePatterns {
+    height: 130px;
+}
+
+[id$="LEILTEditSessionsControl_AppointmentRecurrenceEditor_RecurrencePanel"] .rsAdvRadio input {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+[id$="LEILTEditSessionsControl_AppointmentRecurrenceEditor_RecurrenceRangePanel"] .rsAdvOptionsPanel input[type="text"], [id$="LEILTEditSessionsControl_AppointmentRecurrenceEditor_RecurrenceRangePanel"] .rsAdvOptionsPanel input[type="radio"] {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+[id$="LEILTEditSessionsControl_AppointmentRecurrenceEditor_RecurrencePanel"] {
+    float: right;
+    margin-right: 10px !important;
+    width: 65%;
+}
+
+#header_search.header_mobile {
+    height: 100%;
+    position: relative;
+    left:0px;
+    top:-10px;
+}
+
+    #headersearch.header_mobile.heightListAll {
+        height: 135px;
+    }
+
+    #header_search.header_mobile #Search_ThirdContainer {
+        position: relative;
+        min-width: 220px;
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+        right: 4px;
+    }
+
+        #header_search.header_mobile #Search_ThirdContainer #search {
+            padding: 3px 0 3px 3px;
+            height: 25px;
+            float: left;
+    width: 25px;
+        }
+
+        #header_search.header_mobile #Search_ThirdContainer input {
+            
+        }
+
+@media(max-width:568px) {
+    #header_search #Search_FirstContainer, #header_activeTeam_search #Search_SecondContainer {
+        width: 100%;
+       
+    }
+
+    #header_search #Search_FirstContainer {
+      
+        margin-left: 0;
+    }
+
+    #header_search #Search_SecondContainer {
+        margin-top: 10px;
+    }
+}
+
+@media(max-width:850px) {
+    #header_activeTeam_search {
+        height: 70px;
+        min-width: 340px;
+        position: relative;
+    }
+}
+
+[id$="ManagerLECatalog_pnlLoList"] {
+    width:100%;
+    float:left;
+}
+
+
+div[id$="ctlLOTreeGrid_rtvLoadOnDemand"], div[id$="ManagerMyTeamTeamManagement_rtvTeamLOD"] {
+    /*padding: 5px;*/
+}
+
+table.dnnFormRadioButtons {
+    background-color: inherit;
+}
+
+.lms-Popup_Content .dnnFormItem input:not(.ruFakeInput):not(.ruCancel), #divControlls input, .lms-Popup_Content .dnnFormItem select, .lms-GeneralContent .dnnFormItem input:not(.ruFakeInput), .RadInput_Default, table.RadCalendarTimeView_Default, .RecurrenceEditor_Default, .lms-Popup_Content .dnnFormItem table, .lms-Popup_Content table,.RadGrid_Default {
+    font-size: inherit !important;
+    font-family: inherit !important;
+    line-height: inherit !important;
+}
+
+.lms-GeneralContent .dnnFormItem input:not([type='radio']):not([type='checkbox']), .lms-GeneralContent .dnnFormItem select, .lms-Popup_Content .dnnFormItem #cwdData input,.lms-Popup_Content .dnnFormItem .lms-MarginTop > input, .lms-Popup_Content .dnnFormItem > input:not([type='radio']):not([type='checkbox']), .lms-Popup_Content .dnnFormItem select,.lms-Popup_Content .dnnFormItem table input:not([type='radio']):not([type='checkbox']),.lms-Popup_Content .dnnFormItem .RadComboBox_izmlms table {
+    height: 25px;
+    padding: 0 0 1px 3px !important;
+    box-sizing: border-box;
+}
+
+.RadUpload_Default, .RadUpload_Default a, .RadUpload_Default input, .RadUpload .ruFileWrap, .RadUpload_Default input {
+    font-size: inherit !important;
+    font-family: inherit !important;
+}
+
+[id$="rgdSessions"] .rgMasterTable thead tr th.rgHeader, [id$="rgdRoster"] .rgMasterTable thead tr th.rgHeader {
+    background: -moz-linear-gradient(90deg,#ebebeb 0%,#f9f9f9 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#f9f9f9),color-stop(100%,#ebebeb));
+    background: -webkit-linear-gradient(90deg,#ebebeb 0%,#f9f9f9 100%);
+    background: -o-linear-gradient(90deg,#ebebeb 0%,#f9f9f9 100%);
+    background: -ms-linear-gradient(90deg,#ebebeb 0%,#f9f9f9 100%);
+    background: linear-gradient(0,#ebebeb 0%,#f9f9f9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#EBEBEB',GradientType=0);
+}
+
+.transparentButtonsCatalogActions {
+    height: 35px;
+    width: 100px;
+    position: absolute;
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+
+/*.RadEditor .reContentArea.reContentAreaToggle, .RadEditor textarea, .RadEditor.reWrapper table td.reContentCell {
+    height: 135px !important;
+}*/
+
+div[id$="ReportGridFilters_pnlGeneralErrorPanel"] .dnnFormMessage {
+    margin-top: 20px;
+}
+
+
+#siteWrapper .container .dnnpane {
+    margin: 0 !important;
+}
+
+/*html {
+    font-size: 13px !important;
+}*/
+
+.lms-Popup_Content .reResizeCell {
+    display: none;
+}
+
+.ui-dialog .ui-resizable-handle {
+    display: none !important;
+}
+
+.lms-GeneralContent .dnnFormItem > input:not([type='radio']):not([type='checkbox']), .lms-Popup_Content .dnnFormItem #cwdData input, .lms-Popup_Content .dnnFormItem > input:not([type='radio']):not([type='checkbox']) {
+    padding: 0 3px 0 3px !important;
+}
+
+.lms-GeneralContent .dnnFormItem > input,.lms-GeneralContent .dnnFormItem > select,.lms-GeneralContent .dnnFormItem > a, .lms-Popup_Content .dnnFormItem > input,.lms-Popup_Content .dnnFormItem > select,.lms-Popup_Content .dnnFormItem > a {
+    display:inline-block;
+    margin-top: 5px;
+}
+
+.lms-GeneralContent .dnnFormItem > div:not(.dnnLabel):not(.dvRuleParameters), .lms-Popup_Content .dnnFormItem > div:not(.dnnLabel):not(.dvRuleParameters),.lms-GeneralContent .dnnFormItem > table,.lms-Popup_Content .dnnFormItem > table{
+    margin-top: 5px;
+}
+
+.lms-GeneralContent .dnnFormItem .dnnLabel > a.dnnFormHelp,.lms-Popup_Content .dnnFormItem .dnnLabel > a.dnnFormHelp {
+    margin-top: 2px !important;
+}
+
+.lms-GeneralContent .dnnFormItem > input[type='radio'],.lms-GeneralContent .dnnFormItem > input[type='checkbox'],.lms-Popup_Content .dnnFormItem > input[type='radio'],.lms-Popup_Content .dnnFormItem > input[type='checkbox'] {
+    margin-top: 10px;
+}
+
+.lms-Popup_Content .dnnPrimaryAction,.lms-Popup_Content .dnnSecondaryAction,.lms-GeneralContent .dnnPrimaryAction, .lms-GeneralContent .dnnSecondaryAction,.ui-dialog.dnnFormPopup.ui-dialog-buttons .dnnPrimaryAction, .ui-dialog.dnnFormPopup.ui-dialog-buttons .dnnSecondaryAction {
+    min-width: inherit !important;
+}
+
+.lms-Popup_Content #divLeDetailsEventSourceSection div[id$="tddlLETypeILT"] {
+    margin-left: 3px;
+    width: 35.4% !important;
+}
+
+.lms-TableGrid tr.dnnGridItem td, .lms-TableGrid tr.dnnGridAltItem td {
+    word-wrap: break-word;
+}
+
+.izmlms-ActiveLearner {
+    float: right;
+    padding: 0;
+    margin-top: 4px;
+}
+
+    .izmlms-ActiveLearner input {
+        border: 1px solid #ccc;
+        padding: 0 0 0 4px;
+        width: 174px;
+    }
+
+    .izmlms-ActiveLearner a img {
+        margin-bottom: 4px;
+    }
+
+#tblIndividualWeights {
+    width: 55%;
+}
+
+    #tblIndividualWeights td.individualWeightInput input {
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        text-align: right;
+        padding-right: 5px !important;
+    }
+
+    #tblIndividualWeights td.separator {
+        height: 2px;
+    }
+
+#actions.hideActions {
+    display: none !important;
+}
+
+/* role rules */
+
+.dvRuleParameters, .dvRuleHeader {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    /*padding: 10px;*/
+    max-width:800px;
+    margin: 0 auto;
+    min-width:260px;
+}
+
+.dvRuleHeader {
+    background-color: #f8f8f8;
+    font-weight: bold;
+  /*display: inline-block;*/  
+    margin-top: 10px;
+    /*padding: 8px 8px 8px 18px !important;*/
+    position: relative;
+    max-width:800px;
+    margin: 0 auto;
+    overflow:hidden;
+    height: 46px;
+}
+
+.dvRuleHeader span {
+   float: left;
+   padding: 10px 12px 18px 9px;
+}
+
+.dvRuleHeader input {
+   float: right;
+   padding: 10px;
+}
+
+.dvRuleParameters .dnnPrimaryAction {
+  margin-left: 9px;
+  margin-bottom: 18px;
+}
+
+.dvRuleParameters, .dvRuleParameters .dnnActions {
+    border-top: none;
+    padding-top: 18px !important;
+}
+
+.dvRuleParameters,.dvRuleHeader {
+    padding-left: 9px;
+
+}
+
+.tblRule .firstColumn {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    width: 5%;
+    background-color: #f8f8f8;
+}
+
+.tblRule .firstColumn span {
+    font-weight: bold;
+    padding: 15px;
+}
+
+.tblParameters {
+    border-collapse: separate;
+    border-spacing: 2px 0px;
+    width: 100%;
+    float:left;
+}
+
+.tblParameters .imageCol {
+    float:right;
+    padding: 2px 10px 0 0;
+}
+
+
+ .tblParameters select {
+    width: 90%;
+ }
+
+ .tblParameters .parameterCol, .tblParameters .comparatorCol, .tblParameters .valueCol {
+    /*width: 29%;*/
+    padding-left:9px;
+    float:left;
+    min-width: 228px;
+    
+}
+
+
+.tblParameters .comparatorCol:empty, .tblParameters .valueCol:empty {
+    display:none;
+
+}
+
+.tblParameters .valueCol {
+     padding-top:1px;
+ }
+
+.tblParameters .valueCol .RadComboBox_square_border {
+     padding-top:0px !important;
+     padding-bottom: 0px !important;
+ }
+
+
+.tblParameters .valueCol .RadPicker {
+     height: 11px !important;
+     width: 80px !important;
+     float:left;
+ }
+
+  .tblParameters .valueCol .RadPicker table.rcTable {
+     width: inherit !important;
+     max-width: 150px;
+ }
+
+ .tblParameters .valueCol div[id$="rcbTeams"] table {
+     margin-bottom:0;
+ }
+
+ .tblParameters .valueCol .RadPicker.dateValue {
+     height: 24px !important;
+   
+ }
+
+ .tblParameters .valueCol .RadPicker:nth-of-type(2) {
+     margin-left: 40px;
+     width:40% !important;
+ }
+
+ .tblParameters .valueCol .RadPicker table.rcSingle .rcInputCell, .tblParameters .valueCol .RadPicker table.rcSingle .rcInputCell span, .tblParameters .valueCol .RadPicker table.rcSingle .rcInputCell span input {
+       width: 88px !important;
+ }
+
+ .tblParameters .valueCol .RadPicker table.rcSingle .rcInputCell span[id$="txtTimeValue2_dateInput_wrapper"] {
+       margin-left: 40px !important;
+  
+ }
+
+ .tblParameters .valueCol .RadPicker table.rcSingle .rcInputCell span[id$="txtTimeValue2_dateInput_wrapper"],.tblParameters .valueCol .RadPicker:not(.dateValue) table.rcSingle .rcInputCell span[id$="txtDateValue2_dateInput_wrapper"] {
+       margin-top: 5px !important;
+       
+ }
+  
+
+ .tblParameters .valueCol input.riTextBox {
+     height: 100%;
+     max-height: 24px !important;
+     margin-bottom: 0 !important;
+            /*margin-top: 5px;*/
+ }
+
+.tblParameters .valueCol .RadComboBox_izmlms,.tblParameters .parameterCol .RadComboBox_izmlms, .tblParameters .comparatorCol .RadComboBox_izmlms  {
+      padding-left: 0 !important;
+      min-width:220px; 
+}
+
+
+.dvOr {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px 0 10px 18px;
+    font-weight:bold; 
+}
+
+.tblParameters .valueCol input.riTextBox {
+    height: 100%;
+    max-height: 30px;
+}
+
+.tblParameters .valueCol input[type=checkbox] {
+    margin-left: 0 !important;
+}
+
+.tblParameters .valueCol > input {
+    margin-bottom: 0 !important;
+    height: 25px;
+    outline:none;
+    box-sizing: border-box;
+}
+
+.tblParameters .valueCol > input.textValue, .tblParameters .valueCol > input.integerValue {
+    width: 219px;
+}
+
+.tblParameters .valueCol > input.durationValue {
+    width: 50px;
+    vertical-align: middle;
+}
+
+
+
+.tblParameters [id$="_cboCalcDate"] {
+    width: 90px !important;             
+    min-width: 90px !important;
+    margin-left: 3px;
+}
+
+.tblParameters .dvAnd {
+    float:left;
+    width:100%;
+}
+
+.tblParameters .dvAnd span {
+    font-weight:bold; 
+    padding-left: 10px;
+    text-align:left;
+}
+
+.tblParameters .dvAnd .lblAnd {
+    width:58%;
+    float:left;
+    padding: 0 0 3px;
+    position: relative;
+}
+
+.tblParameters .dvAnd .lblError {
+    float:right;
+    width:42%; 
+    position: relative;
+}
+
+@media(max-width:540px) {
+    .tblParameters .dvAnd .lblAnd {
+        width:10%;
+       
+    }
+
+    .tblParameters .dvAnd .lblError {
+        width:70%; 
+    }
+
+}
+
+.rcbSlide .RadComboBoxDropDown_Default, .tblParameters .RadComboBox_square_border {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+
+.machingLearners .dnnSecondaryAction {
+    color: inherit !important;
+}
+
+/*.machingLearners .dnnLabel {
+    margin-top: 10px !important;
+}*/
+
+.machingLearners #ctlRoleEdit_lblMatchingLearnersPanel {
+    margin-top: 8px !important;
+}
+
+#maindiv #ctlRoleEdit_optYesNo_0 td input[type="radio"] {
+    margin: 5px 3px 5px 0 !important;
+}
+
+#ctlRoleEdit_lblMatchingLearnersPanel {
+    float: left;
+    margin-right: 10px;
+}
+
+.machingLearners [id$="ctlRoleEdit_ctlRoleRuleTeamSelector2_rcbTeams"] {
+    visibility: hidden;
+}
+
+.machingLearners [id$="ctlRoleEdit_lblMatchingLearners"] {
+    float:left;
+}
+
+.machingLearners #dvRefreshMatchingLearners {
+    float:left;
+    margin-top:8px;
+}
+
+.dvAddNewRule {
+    max-width:800px;
+    margin: 0 auto;
+}
+
+.lms-image-button {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    height: inherit !important;
+    outline:none;
+}
+
+/*[id$="ctlRoleEdit_dvAutomaticDrop"] .dnnLabel {
+    margin-top:0px !important;
+}*/
+
+/* End Role rules*/
+
+[id$="imgEditGroup"]
+{
+  height: inherit !important;
+}
+
+
+.dnnRadiobutton + .dnnBoxLabel {
+    font-weight:normal;
+}
+
+.lms-GeneralContent .dnnFormItem.lms-labelWithCheckbox .dnnLabel,.lms-Popup_Content .dnnFormItem.lms-labelWithCheckbox .dnnLabel {
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.lms-roleNotifications .RadComboBox_izmlms, .lms-roleNotifications input, #divRoleEdit .lms-inputWithRadCombobox .RadComboBox_izmlms {
+    margin: 0px 0px 5px 3px;
+}
+
+#divRoleEdit .lms-inputWithRadCombobox .RadComboBox_izmlms{
+    margin:0px 0px 3px 3px;
+}
+
+/* fix roster with popup disabled*/
+div[id$="RosterControl_mainDiv"] {
+    overflow:visible; 
+}
+
+/* header le and folder details */
+div[id$="divHeader"] .left {
+    margin-top:3px;
+    width:5%;
+    min-width: 40px;  
+}
+
+div[id$="divHeader"] .headerRight {
+    width:95%;  
+    float:none;
+    text-align: left;
+}
+
+div[id$="divHeader"] .left img {
+    width:32px;  
+}
+
+div[id$="divHeader"] .headerRight h3{
+    margin-bottom:0;  
+}
+
+#ctlAssesmentIntroduction .dnn-file-upload, #ctlAssesmentPass .dnn-file-upload, #ctlAssessmentFail .dnn-file-upload,#ctlSurveyIntroduction .dnn-file-upload,#ctlSurveyCompletion  .dnn-file-upload{
+    margin:0 !important;
+}
+
+div[id$="pnlAssessmentMessages"] h3.topPadding{
+    padding-top:30px;  
+}
+
+[id$="teMessageAssessmentIntroduction_OptView"] label {
+    font-weight:normal;
+}
+
+div[id$="ManagerLEEdit_TrUpdateVersion"] {
+    margin-top:-10px;  
+}
+
+.dnnFormItem input.lms-TextWithLabel {
+    text-align:right;
+    margin: 0px 8px 0px 10px !important;
+    padding:0 3px 0 0 !important;
+    height:25px;
+}
+
+.lms-TextWithLabel + span {
+    /*margin-right: 5px !important;*/
+}
+
+/*#ctlMicrosoftFiles, #ctlLEFiles, #ctlPDFFiles {
+    text-align:left;
+}*/
+
+.dnnFormItem .lblTimezone {
+    float:left;
+    margin: 3px 0px 0px 5px;
+}
+
+ [id$="EnrollmentTranscripts_ctlLearnerPanes_tabsTranscript"], [id$="EnrollmentTranscripts_ctlLearnerPanes_tabsTranscript"] .dnnSecondaryAction {
+     /*font-size:14px;*/
+    
+ }
+
+ [id$="EnrollmentTranscripts_ctlLearnerPanes_tabsTranscript"] .dnnSecondaryAction {
+     margin-bottom:20px;
+ }
+
+ .lms-GeneralContent .dnnFormItem table {
+     font-size:inherit;
+ }
+
+#maindiv table.lms-BulkImportDatalist td select {
+    padding: 0 0 0 3px !important;
+    margin-bottom: 5px !important;
+}
+
+.lms-breakWord {
+    word-wrap:break-word; 
+}
+
+.lms-Popup_Content input[type="image"], .lms-GeneralContent input[type="image"] {
+    cursor:pointer;
+}
+
+#header_search {
+    height:20px;
+    width:100%;
+    position:static;
+    top: 45px;
+    left: 8px;
+}
+
+#divMain {
+    float:left;
+    width: 100%;
+}
+
+#divMain #header_search {
+    top: 0px; 
+
+}
+
+#header_search #Search_ThirdContainer.lms-MgrEnrollmentSearch input {
+    line-height: 18px !important;
+
+}
+
+.dnnFormSubSectionHead {
+    margin-top: 20px;
+}
+
+.pnlLoList {
+    margin-top:10px; 
+}
+
+.RadComboBox_Default .rcbFocused .rcbReadOnly .rcbInput {
+    color: inherit !important;
+}
+
+/* Team Rules*/
+/*#ctlMembershipRules_dvmachingLearners #ctlMembershipRules_cmdRefreshMatchingLearners {
+    margin-top: 8px;
+    margin-left: -6px;
+}*/
+
+#ctlMembershipRules_dvmachingLearners #ctlMembershipRules_lblMatchingLearners{
+     margin-right: 5px;
+    float: left;
+      
+}
+
+#ctlMembershipRules_dvmachingLearners #ctlMembershipRules_lblMatchingLearners:empty{
+     margin-right: 0px;
+}
+
+#IZMLMS_manager_table_bg {
+    margin-top: -15px !important;
+}
+
+/* Role Rules fixed */
+.lms-GeneralContent .dnnFormItem .dvRuleHeader input[id*="ctlManagerMyTeamLearningRoleManagement_ctlRoleEdit_rptRules_btnDeleteRule"]
+{
+    float: right;
+    padding: 10px !important;
+    height:100%;
+}
+
+/* Fix combobox in admin types*/
+#maindiv #ctlManagerAdminTypeDetailControl_divSecAdminTypeDetails #ctlManagerAdminTypeDetailControl_tcmbIconSmall #ctlManagerAdminTypeDetailControl_tcmbIconSmall_Input{
+    padding:0 0 3px 0 !important;
+    margin-top: 0 !important;
+}
+
+.lms-disabled {
+    color:#ccc;
+}
+
+.dnnFormPopup .ui-dialog-buttonpane button {
+   border: 1px solid #c2c2c2;
+}
+
+#ctlActiveTeamRolesSeach_ctlSearchUsers_pnlSearchUsersOptionsPanel, #ctlActiveTeamRolesSeach_ctlSearchUsers_cmdListUsersPanel {
+    float:left;
+}
+
+.lms-Popup_Content #RosterPanels .RadPicker table.rcTable {
+    position: absolute !important;
+    width: inherit !important;
+    padding-top: 2px;
+}
+
+.lms-SimpleReportMargin {
+    margin-left: 80px;
+}
+
+#lms-iconSimpleReport {
+    width: 62px;
+    position: absolute;
+}
+
+#lms-iconSimpleReport img {
+    float: right;
+}
+
+#fieldsetSimpleReport {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
