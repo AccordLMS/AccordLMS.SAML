@@ -48,7 +48,7 @@ namespace DNN.Authentication.SAML
                 //LogToEventLog("Logoff.OnLoad()", string.Format("Logging off from saml {0}", user == null ? "null" : user.Username));
                 //X509Certificate2 cert = StaticHelper.GetCert(config.OurCertFriendlyName);
 
-                
+
                 //XmlDocument request = GenerateSAMLLogoffRequest(user.Username);
                 //request = StaticHelper.SignSAMLRequest2(request, cert);
                 //string convertedRequestXML = StaticHelper.Base64CompressUrlEncode(request.OuterXml);
@@ -61,12 +61,12 @@ namespace DNN.Authentication.SAML
                 //    "&SigAlg=" + convertedSigAlg +
                 //    "&Signature=" + convertedSignature
                 //;
-
+                config = DNNAuthenticationSAMLAuthenticationConfig.GetConfig(PortalId);
                 base.OnLogOff(e);
                 Session.Remove("sessionIndexFromSAMLResponse");
 
                 //LogToEventLog("Logoff()", string.Format("Redirecting to {0}", redirectTo));
-                Response.Redirect(Request.RawUrl);
+                Response.Redirect(config.IdPLogoutURL);
             }
             catch (System.Threading.ThreadAbortException tae)
             {

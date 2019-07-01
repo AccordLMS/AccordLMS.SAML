@@ -25,6 +25,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -109,6 +110,7 @@
     </Content>
     <Content Include="Login.ascx" />
     <Content Include="Logoff.ascx" />
+    <Content Include="module.css" />
     <Content Include="Settings.ascx" />
   </ItemGroup>
   <ItemGroup>
@@ -118,7 +120,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />
-    <Content Include="DNN.Authentication.SAML.dnn" />
+    <Content Include="DNN.Authentication.SAML.dnn">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ClassDiagram1.cd" />
     <Content Include="packages.config" />
     <None Include="web.Debug.config">
