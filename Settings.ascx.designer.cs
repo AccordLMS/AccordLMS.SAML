@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DNN.Authentication.SAML {
-    
-    
-    public partial class Settings {
-        
+namespace DNN.Authentication.SAML
+{
+
+
+    public partial class Settings
+    {
+
         /// <summary>
         /// lblEnabled control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEnabled;
-        
+
         /// <summary>
         /// chkEnabled control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkEnabled;
-        
+
         /// <summary>
         /// lblIdpUrl control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblIdpUrl;
-        
+
         /// <summary>
         /// txtIdpUrl control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtIdpUrl;
-        
+
         /// <summary>
         /// lblIdpLogoutUrl control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblIdpLogoutUrl;
-        
+
         /// <summary>
         /// txtIdpLogoutUrl control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtIdpLogoutUrl;
-        
+
         /// <summary>
         /// lblConsumerServUrl control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblConsumerServUrl;
-        
+
         /// <summary>
         /// txtConsumerServUrl control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtConsumerServUrl;
-        
+
         /// <summary>
         /// lblOurIssuerEntityId control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblOurIssuerEntityId;
-        
+
         /// <summary>
         /// txtOurIssuerEntityId control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtOurIssuerEntityId;
-        
+
         /// <summary>
         /// lblDNNAuthName control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDNNAuthName;
-        
+
         /// <summary>
         /// txtDNNAuthName control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDNNAuthName;
-        
+
         /// <summary>
         /// lblTheirCert control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTheirCert;
-        
+
         /// <summary>
         /// txtTheirCert control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTheirCert;
-        
+
         /// <summary>
         /// lblFirstName control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFirstName;
-        
+
         /// <summary>
         /// txtFirstName control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
-        
+
         /// <summary>
         /// lblLastName control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLastName;
-        
+
         /// <summary>
         /// txtLastName control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
-        
+
         /// <summary>
         /// lblDisplayName control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDisplayName;
-        
+
         /// <summary>
         /// txtDisplayName control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDisplayName;
-        
+
         /// <summary>
         /// lblEmail control.
         /// </summary>
@@ -200,7 +202,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEmail;
-        
+
         /// <summary>
         /// txtEmail control.
         /// </summary>
@@ -209,7 +211,7 @@ namespace DNN.Authentication.SAML {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
-        
+
         /// <summary>
         /// repeaterProps control.
         /// </summary>

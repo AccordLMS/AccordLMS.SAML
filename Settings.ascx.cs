@@ -190,8 +190,6 @@ namespace DNN.Authentication.SAML
         }
 
         public bool Enabled { get; set; }
-        //public string OurCertFriendlyName { get; set; }
-        //public string TheirCert { get; set; }
         public string IdPURL { get; set; }
         public string IdPLogoutURL { get; set; }
         public string OurIssuerEntityID { get; set; }
@@ -204,12 +202,6 @@ namespace DNN.Authentication.SAML
         public string usrDisplayName { get; set; }
         public string usrEmail { get; set; }
 
-
-        //public static void ClearConfig(int portalId)
-        //{
-        //    string key = PREFIX + portalId;
-        //    DataCache.RemoveCache(key);
-        //}
 
         public static DNNAuthenticationSAMLAuthenticationConfig GetConfig(int portalId)
         {

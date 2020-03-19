@@ -24,7 +24,7 @@
 	}
 </style>
 
-
+<h2>SAML Configuration</h2>
 <div class="dnnFormItem">
     <asp:label class="samlLabel" id="lblEnabled" runat="server" Text="Enabled:"></asp:label>
     <asp:CheckBox class="samlTextbox" Checked="true" runat="server" ID="chkEnabled"></asp:CheckBox>
@@ -53,6 +53,8 @@
     <asp:Label class="samlLabel" ID="lblTheirCert" runat="server" Text="X509 Certificate:" />
     <asp:TextBox class="samlTextbox" runat="server" ID="txtTheirCert" Columns="40" Rows="3" TextMode="MultiLine"></asp:TextBox>
 </div>
+<h3>User Profile Mappings</h3>
+<p>To map incoming values to their respective DNN Profile values provide the attribute name that should be used to lookup the value in the incoming SAML assertion.</p>
 <div class="dnnFormItem">
     <asp:Label class="samlLabel" ID="lblFirstName" runat="server" Text="First Name:" />
     <asp:TextBox class="samlTextbox" runat="server" ID="txtFirstName"></asp:TextBox>
@@ -69,16 +71,12 @@
     <asp:Label class="samlLabel" ID="lblEmail" runat="server" Text="Email:" />
     <asp:TextBox class="samlTextbox" runat="server" ID="txtEmail"></asp:TextBox>
 </div>
-
 <asp:Repeater ID="repeaterProps" runat="server">
     <ItemTemplate>
         <div class="dnnFormItem">
             <asp:Label class="samlLabel" ID="lblProperty" runat="server" Text='<%#Eval("Property") %>' />
             <asp:TextBox class="samlTextbox" runat="server" ID="txtMappedValue" Text='<%#Eval("Mapping") %>'></asp:TextBox>
         </div>
-        <%--<asp:Label ID="lblProperty2" runat="server" Text='<%#Eval("Property") %>' Font-Bold="true"/>
-        <asp:TextBox id="txtMappedValue2" CssClass="textValue" runat="server" Text='<%#Eval("Mapping") %>'></asp:TextBox>
-        <br />--%>
     </ItemTemplate>
 </asp:Repeater>
 
