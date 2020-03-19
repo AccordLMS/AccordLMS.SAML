@@ -5,7 +5,7 @@ A free, open source authentication provider for DNN.
 
 You can now Single Sign On from a remote website (if it has implemented SAML) to your DNN Portal.
 
-SAML
+## SAML
 https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language
 Security Assertion Markup Language (SAML) is an open standard for exchanging authentication and authorization data between parties, in particular, between an identity provider and a service provider. SAML is an XML-based markup language for security assertions (statements that service providers use to make access-control decisions). SAML is also:
 
@@ -22,13 +22,17 @@ In the SAML domain model, a SAML authority is any system entity that issues SAML
 Available at GitHub
 https://github.com/AccordLMS/AccordLMS.SAML
 
-Current Features
+## Current Features
 - Single SIgn On to a DNN site from a remot site using a SAML identity provider
 - Match your DNN Profile properties and User properties with SAML Claims
 - Sync these values during a User login 
 - Creates and Syncs a new DNN User during login if it doesn't exist
+- Can assign users to roles identified in an incoming SAML Attribute.  (Creating roles as needed in DNN as well)
+- Can remove a user from roles if they are not included in the passed SAML Attribute
 
-Wish List
-- Create / Sync DNN Roles based on SAML Claims
+* Minimum DNN Version *
+
+DNN 7.4.2 and later supported
+
 
 Please feel free to utilized the provider and let us know if you encounter any problems.  We have used it for several or our LMS clients and it is stable and working without problem.  Contact any of the GitHub contributors for assistance (within reason).  Also, please submit pull requests if you add features.  Our team will review then and then include in the master release.
