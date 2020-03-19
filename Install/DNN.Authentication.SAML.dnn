@@ -1,6 +1,6 @@
 ﻿<dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="DNN.Authentication.SAML" type="Auth_System" version="02.01.00">
+    <package name="DNN.Authentication.SAML" type="Auth_System" version="02.01.01">
       <friendlyName>DNN.Authentication.SAML</friendlyName>
       <description>DNN.Authentication.SAML</description>
       <owner>
@@ -57,7 +57,7 @@
             <assembly>
               <path>bin</path>
               <name>DNN.Authentication.SAML.dll</name>
-              <version>02.01.00</version>
+              <version>02.01.01</version>
             </assembly>
           </assemblies>
         </component>

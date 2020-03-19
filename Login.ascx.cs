@@ -228,16 +228,15 @@ namespace DNN.Authentication.SAML
                                     //Ensure roles if neeeded
                                     if (rolesList.Any())
                                     {
-                                        //Start out by ensuring role management
                                         AssignRolesFromList(userInfo, rolesList);
+                                    }
 
-                                        //If we have a required role list, remove any of those items that were not in the saml
-                                        if (requiredRolesList.Any())
-                                        {
-                                            var toRemove = requiredRolesList.Where(req => !rolesList.Contains(req))
-                                                .ToList();
-                                            RemoveRolesFromList(userInfo, toRemove);
-                                        }
+                                    //If we have a required role list, remove any of those items that were not in the SAML attribute
+                                    if (requiredRolesList.Any())
+                                    {
+                                        var toRemove = requiredRolesList.Where(req => !rolesList.Contains(req))
+                                            .ToList();
+                                        RemoveRolesFromList(userInfo, toRemove);
                                     }
                                 }
                                 catch (Exception ex)
