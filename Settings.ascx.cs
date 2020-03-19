@@ -23,9 +23,8 @@ namespace DNN.Authentication.SAML
         {
             try
             {
-                DNNAuthenticationSAMLAuthenticationConfig config = DNNAuthenticationSAMLAuthenticationConfig.GetConfig(PortalId);              
+                var config = DNNAuthenticationSAMLAuthenticationConfig.GetConfig(PortalId);
                 config.PortalID = PortalId;
-
                 config.ConsumerServURL = txtConsumerServUrl.Text;
                 config.DNNAuthName = txtDNNAuthName.Text;
                 config.Enabled = chkEnabled.Checked;
@@ -37,6 +36,8 @@ namespace DNN.Authentication.SAML
                 config.usrEmail = txtEmail.Text;
                 config.usrFirstName = txtFirstName.Text;
                 config.usrLastName = txtLastName.Text;
+                config.RoleAttribute = txtRoleAttributeName.Text;
+                config.RequiredRoles = txtRequiredRolesTextbox.Text;
 
                 DNNAuthenticationSAMLAuthenticationConfig.UpdateConfig(config);
 
@@ -64,7 +65,7 @@ namespace DNN.Authentication.SAML
 
             try
             {
-                DNNAuthenticationSAMLAuthenticationConfig config = DNNAuthenticationSAMLAuthenticationConfig.GetConfig(PortalId);
+                var config = DNNAuthenticationSAMLAuthenticationConfig.GetConfig(PortalId);
                 BindRepeater();
                 txtIdpUrl.Text = config.IdPURL;
                 txtIdpLogoutUrl.Text = config.IdPLogoutURL;
@@ -77,8 +78,8 @@ namespace DNN.Authentication.SAML
                 txtOurIssuerEntityId.Text = config.OurIssuerEntityID;
                 txtTheirCert.Text = config.TheirCert;
                 chkEnabled.Checked = config.Enabled;
-
-
+                txtRoleAttributeName.Text = config.RoleAttribute;
+                txtRequiredRolesTextbox.Text = config.RequiredRoles;
             }
             catch (Exception exc)
             {
@@ -88,35 +89,34 @@ namespace DNN.Authentication.SAML
 
         private void BindRepeater()
         {
-            DataSet ds = new DataSet();
-            DataTable dt = ds.Tables.Add("Properties");
+            var ds = new DataSet();
+            var dt = ds.Tables.Add("Properties");
             dt.Columns.Add("Property", typeof(string));
             dt.Columns.Add("Mapping", typeof(string));
 
-            Dictionary<string, string> properties = new Dictionary<string, string>();
-            ProfilePropertyDefinitionCollection props = ProfileController.GetPropertyDefinitionsByPortal(PortalId);
+            var props = ProfileController.GetPropertyDefinitionsByPortal(PortalId);
             foreach (ProfilePropertyDefinition def in props)
             {
+                //Skip First Name or Last Name
                 if (def.PropertyName == "FirstName" || def.PropertyName == "LastName")
                 {
+                    continue;
+                }
 
+                var setting = Null.NullString;
+                var row = ds.Tables[0].NewRow();
+                row[0] = def.PropertyName + ":";
+                if (PortalController.Instance.GetPortalSettings(PortalId).TryGetValue(usrPREFIX + def.PropertyName, out setting))
+                {
+                    row[1] = setting;
                 }
                 else
                 {
-                    string setting = Null.NullString;
-                    DataRow row = ds.Tables[0].NewRow();
-                    row[0] = def.PropertyName + ":";
-                    if (PortalController.Instance.GetPortalSettings(PortalId).TryGetValue(usrPREFIX + def.PropertyName, out setting))
-                    {
-                        row[1] = setting;
-                    }
-                    else
-                    {
-                        row[1] = "";
-                    }
-                    ds.Tables[0].Rows.Add(row);
+                    row[1] = "";
                 }
-                
+                ds.Tables[0].Rows.Add(row);
+
+
             }
 
             repeaterProps.DataSource = ds;
@@ -129,8 +129,8 @@ namespace DNN.Authentication.SAML
     [Serializable]
     public class DNNAuthenticationSAMLAuthenticationConfig : AuthenticationConfigBase
     {
-        private const string PREFIX = "DNN.Authentication.SAML" + "_";
-        private const string usrPREFIX = "usr" + "_";
+        private const string PREFIX = "DNN.Authentication.SAML_";
+        private const string usrPREFIX = "usr_";
         protected DNNAuthenticationSAMLAuthenticationConfig(int portalID) : base(portalID)
         {
             this.PortalID = portalID;
@@ -138,14 +138,6 @@ namespace DNN.Authentication.SAML
             string setting = Null.NullString;
             if (PortalController.Instance.GetPortalSettings(portalID).TryGetValue(PREFIX + "Enabled", out setting))
                 Enabled = bool.Parse(setting);
-
-            //setting = Null.NullString;
-            //if (PortalController.GetPortalSettingsDictionary(portalID).TryGetValue(PREFIX + "OurCertFriendlyName", out setting))
-            //    OurCertFriendlyName = setting;
-
-            //setting = Null.NullString;
-            //if (PortalController.GetPortalSettingsDictionary(portalID).TryGetValue(PREFIX + "TheirCert", out setting))
-            //    TheirCert = setting;
 
             setting = Null.NullString;
             if (PortalController.Instance.GetPortalSettings(portalID).TryGetValue(PREFIX + "IdPURL", out setting))
@@ -187,6 +179,16 @@ namespace DNN.Authentication.SAML
             setting = Null.NullString;
             if (PortalController.Instance.GetPortalSettings(portalID).TryGetValue(usrPREFIX + "Email", out setting))
                 usrEmail = setting;
+
+            setting = Null.NullString;
+            if (PortalController.Instance.GetPortalSettings(portalID)
+                .TryGetValue(usrPREFIX + "RoleAttribute", out setting))
+                RoleAttribute = setting;
+
+            setting = Null.NullString;
+            if (PortalController.Instance.GetPortalSettings(portalID)
+                .TryGetValue(usrPREFIX + "RequiredRoles", out setting))
+                RequiredRoles = setting;
         }
 
         public bool Enabled { get; set; }
@@ -202,6 +204,9 @@ namespace DNN.Authentication.SAML
         public string usrDisplayName { get; set; }
         public string usrEmail { get; set; }
 
+        public string RoleAttribute { get; set; }
+        public string RequiredRoles { get; set; }
+
 
         public static DNNAuthenticationSAMLAuthenticationConfig GetConfig(int portalId)
         {
@@ -212,8 +217,6 @@ namespace DNN.Authentication.SAML
         public static void UpdateConfig(DNNAuthenticationSAMLAuthenticationConfig config)
         {
             PortalController.UpdatePortalSetting(config.PortalID, PREFIX + "Enabled", config.Enabled.ToString());
-            //PortalController.UpdatePortalSetting(config.PortalID, PREFIX + "OurCertFriendlyName", config.OurCertFriendlyName);
-            //PortalController.UpdatePortalSetting(config.PortalID, PREFIX + "TheirCert", config.TheirCert);
             PortalController.UpdatePortalSetting(config.PortalID, PREFIX + "IdPURL", config.IdPURL);
             PortalController.UpdatePortalSetting(config.PortalID, PREFIX + "IdPLogoutURL", config.IdPLogoutURL);
             PortalController.UpdatePortalSetting(config.PortalID, PREFIX + "OurIssuerEntityID", config.OurIssuerEntityID);
@@ -226,6 +229,8 @@ namespace DNN.Authentication.SAML
             PortalController.UpdatePortalSetting(config.PortalID, usrPREFIX + "LastName", config.usrLastName);
             PortalController.UpdatePortalSetting(config.PortalID, usrPREFIX + "DisplayName", config.usrDisplayName);
             PortalController.UpdatePortalSetting(config.PortalID, usrPREFIX + "Email", config.usrEmail);
+            PortalController.UpdatePortalSetting(config.PortalID, usrPREFIX + "RoleAttribute", config.RoleAttribute);
+            PortalController.UpdatePortalSetting(config.PortalID, usrPREFIX + "RequiredRoles", config.RequiredRoles);
         }
 
         public string getProfilePropertySAMLName(string DNNpropertyName)
@@ -241,7 +246,7 @@ namespace DNN.Authentication.SAML
             }
         }
 
-        
+
     }
 }
 
