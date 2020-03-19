@@ -1,6 +1,6 @@
 ﻿<dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="DNN.Authentication.SAML" type="Auth_System" version="02.00.00">
+    <package name="DNN.Authentication.SAML" type="Auth_System" version="02.01.00">
       <friendlyName>DNN.Authentication.SAML</friendlyName>
       <description>DNN.Authentication.SAML</description>
       <owner>
@@ -12,11 +12,10 @@
       <license>License</license>
       <releaseNotes>release notes</releaseNotes>
       <dependencies>
-        <dependency type="CoreVersion">07.01.01</dependency>
+        <dependency type="CoreVersion">07.04.02</dependency>
       </dependencies>
 
       <components>
-
         <component type="AuthenticationSystem">
           <authenticationService>
             <type>SAML</type>
@@ -58,7 +57,7 @@
             <assembly>
               <path>bin</path>
               <name>DNN.Authentication.SAML.dll</name>
-              <version>01.01.00.00</version>
+              <version>02.01.00</version>
             </assembly>
           </assemblies>
         </component>
