@@ -1,7 +1,6 @@
 #region Usings
 
 using System;
-using System.Linq;
 using System.Web;
 using DotNetNuke.Data;
 using DotNetNuke.Entities.Users;        //for UserController
@@ -10,22 +9,11 @@ using DotNetNuke.Instrumentation;       //for logger
 using DotNetNuke.Services.Log.EventLog; //for eventlog
 using DotNetNuke.Services.Authentication;   //for AuthenticationLoginBase
 using DotNetNuke.Security.Membership;   //for UserLoginStatus
-using System.Security.Claims;           //for ClaimsPrincipal
-using System.IdentityModel.Services; //SignInRequestMessage
-using System.IdentityModel.Tokens; //SecurityTokenHandlerCollection
 
-using Globals = DotNetNuke.Common.Globals;
+
 using System.Xml;
-using System.IO;
-using DotNetNuke.Security.Roles;
 using System.Text;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Security.Cryptography;
-using System.Security.Cryptography.Xml;
-using Saml;
-
-
 #endregion
 
 namespace DNN.Authentication.SAML
@@ -70,8 +58,6 @@ namespace DNN.Authentication.SAML
                     config = DNNAuthenticationSAMLAuthenticationConfig.GetConfig(PortalId);
                     if (Request.HttpMethod == "POST" && !Request.IsAuthenticated)
                     {
-                        //if (Request.HttpMethod == "POST" && !Request.IsAuthenticated)
-                        //{
                         //specify the certificate that your SAML provider has given to you
                         string samlCertificate = config.TheirCert;
 
@@ -224,11 +210,7 @@ namespace DNN.Authentication.SAML
                                 }
                                
                             }
-
-
-                            //string sessionIndexFromSAMLResponse = responseHandler.GetSessionIndex();
-                            //Session["sessionIndexFromSAMLResponse"] = sessionIndexFromSAMLResponse;
-
+                            
 
                             UserValidStatus validStatus = UserController.ValidateUser(userInfo, PortalId, true);
                             UserLoginStatus loginStatus = validStatus == UserValidStatus.VALID ? UserLoginStatus.LOGIN_SUCCESS : UserLoginStatus.LOGIN_FAILURE;
@@ -252,8 +234,7 @@ namespace DNN.Authentication.SAML
                     }
                     else if (Request.IsAuthenticated)
                     {
-                        //if (!Response.IsRequestBeingRedirected)
-                        //    Response.Redirect(Page.ResolveUrl(redirectTo), false);
+                        //Do Nothing if the request is authenticated
                     }
                     else
                     {

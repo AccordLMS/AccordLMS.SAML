@@ -4,18 +4,10 @@ using System;
 
 using DotNetNuke.Services.Authentication;
 using DotNetNuke.Services.Exceptions;
-using DotNetNuke.UI.WebControls;
-using System.ComponentModel;
 using DotNetNuke.Entities.Portals;
 using DotNetNuke.Common.Utilities;
-using DotNetNuke.Data;
-using DotNetNuke.Entities.Users;        //for UserController
 using DotNetNuke.Entities.Profile;
-using DotNetNuke.Instrumentation;       //for logger
-using DotNetNuke.Services.Log.EventLog; //for eventlog
-using DotNetNuke.Security.Membership;
 using System.Data;
-using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
 

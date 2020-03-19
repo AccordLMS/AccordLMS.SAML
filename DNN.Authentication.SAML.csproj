@@ -124,7 +124,6 @@
     <Content Include="DNN.Authentication.SAML.dnn">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="ClassDiagram1.cd" />
     <Content Include="packages.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
