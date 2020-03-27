@@ -54,13 +54,14 @@
     <Reference Include="BouncyCastle.Crypto">
       <HintPath>.\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetNuke, Version=7.4.1.280, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\DotNetNuke.dll</HintPath>
+    <Reference Include="DotNetNuke, Version=7.4.2.216, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Core.7.4.2.216\lib\net40\DotNetNuke.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetNuke.Instrumentation, Version=7.4.1.280, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\DotNetNuke.Instrumentation.dll</HintPath>
+    <Reference Include="DotNetNuke.Instrumentation, Version=7.4.2.216, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Instrumentation.7.4.2.216\lib\net40\DotNetNuke.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Core.7.4.2.216\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.IdentityModel" />
@@ -123,7 +124,6 @@
     <Content Include="DNN.Authentication.SAML.dnn">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="ClassDiagram1.cd" />
     <Content Include="packages.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>

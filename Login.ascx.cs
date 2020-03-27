@@ -1,7 +1,6 @@
 #region Usings
 
 using System;
-using System.Linq;
 using System.Web;
 using DotNetNuke.Data;
 using DotNetNuke.Entities.Users;        //for UserController
@@ -10,21 +9,14 @@ using DotNetNuke.Instrumentation;       //for logger
 using DotNetNuke.Services.Log.EventLog; //for eventlog
 using DotNetNuke.Services.Authentication;   //for AuthenticationLoginBase
 using DotNetNuke.Security.Membership;   //for UserLoginStatus
-using System.Security.Claims;           //for ClaimsPrincipal
-using System.IdentityModel.Services; //SignInRequestMessage
-using System.IdentityModel.Tokens; //SecurityTokenHandlerCollection
 
-using Globals = DotNetNuke.Common.Globals;
+
 using System.Xml;
-using System.IO;
-using DotNetNuke.Security.Roles;
 using System.Text;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Security.Cryptography;
-using System.Security.Cryptography.Xml;
-using Saml;
-
+using System.Linq;
+using DotNetNuke.Common.Utilities;
+using DotNetNuke.Security.Roles;
 
 #endregion
 
@@ -70,8 +62,6 @@ namespace DNN.Authentication.SAML
                     config = DNNAuthenticationSAMLAuthenticationConfig.GetConfig(PortalId);
                     if (Request.HttpMethod == "POST" && !Request.IsAuthenticated)
                     {
-                        //if (Request.HttpMethod == "POST" && !Request.IsAuthenticated)
-                        //{
                         //specify the certificate that your SAML provider has given to you
                         string samlCertificate = config.TheirCert;
 
@@ -90,9 +80,10 @@ namespace DNN.Authentication.SAML
                             //WOOHOO!!! user is logged in
                             //YAY!
 
-                            //Some more optional stuff for you
-                            //lets extract username/firstname etc
+                            //Obtain optional items
                             string username = "", email = "", firstname = "", lastname = "", displayname = "";
+                            var rolesList = new List<string>();
+                            var requiredRolesList = new List<string>();
                             try
                             {
                                 username = samlResponse.GetNameID();
@@ -133,6 +124,20 @@ namespace DNN.Authentication.SAML
                                 {
                                     displayname = samlResponse.GetUserProperty("displayName");
                                 }
+
+                                var roles = samlResponse.GetUserProperty(config.RoleAttribute);
+                                if (!string.IsNullOrWhiteSpace(roles))
+                                {
+                                    rolesList = roles.Split(new []{','}, StringSplitOptions.RemoveEmptyEntries).ToList();
+                                }
+
+                                var requiredRoles = samlResponse.GetUserProperty(config.RequiredRoles);
+                                if (!string.IsNullOrWhiteSpace(requiredRoles))
+                                {
+                                    requiredRolesList = requiredRoles.Split(new[] {','},
+                                        StringSplitOptions.RemoveEmptyEntries).ToList();
+                                }
+
                             }
                             catch (Exception ex)
                             {
@@ -153,8 +158,6 @@ namespace DNN.Authentication.SAML
                                 {
                                     if (username != null && email != null && firstname != null && lastname != null)
                                     {
-                                        
-                                        
                                         if (displayname == null)
                                         {
                                             userInfo.DisplayName = firstname + " " + lastname;
@@ -172,7 +175,7 @@ namespace DNN.Authentication.SAML
                                         userInfo.IsSuperUser = false;
                                         userInfo.Membership.Password = UserController.GeneratePassword();
 
-                                        UserCreateStatus usrCreateStatus = new UserCreateStatus();
+                                        var usrCreateStatus = new UserCreateStatus();
 
                                         usrCreateStatus = UserController.CreateUser(ref userInfo);
 
@@ -180,6 +183,10 @@ namespace DNN.Authentication.SAML
                                         {
                                             UserInfo usrInfo = UserController.GetUserByName(PortalSettings.PortalId, username);
                                             SetProfileProperties(samlResponse, usrInfo);
+
+                                            //Add roles if needed, since a new user no need to remove roles or process that condition
+                                            if (rolesList.Any())
+                                                AssignRolesFromList(usrInfo, rolesList);
                                         }
                                         else
                                         {
@@ -217,6 +224,20 @@ namespace DNN.Authentication.SAML
 
                                     //We update the user's properties
                                     SetProfileProperties(samlResponse, userInfo);
+
+                                    //Ensure roles if neeeded
+                                    if (rolesList.Any())
+                                    {
+                                        AssignRolesFromList(userInfo, rolesList);
+                                    }
+
+                                    //If we have a required role list, remove any of those items that were not in the SAML attribute
+                                    if (requiredRolesList.Any())
+                                    {
+                                        var toRemove = requiredRolesList.Where(req => !rolesList.Contains(req))
+                                            .ToList();
+                                        RemoveRolesFromList(userInfo, toRemove);
+                                    }
                                 }
                                 catch (Exception ex)
                                 {
@@ -224,11 +245,7 @@ namespace DNN.Authentication.SAML
                                 }
                                
                             }
-
-
-                            //string sessionIndexFromSAMLResponse = responseHandler.GetSessionIndex();
-                            //Session["sessionIndexFromSAMLResponse"] = sessionIndexFromSAMLResponse;
-
+                            
 
                             UserValidStatus validStatus = UserController.ValidateUser(userInfo, PortalId, true);
                             UserLoginStatus loginStatus = validStatus == UserValidStatus.VALID ? UserLoginStatus.LOGIN_SUCCESS : UserLoginStatus.LOGIN_FAILURE;
@@ -252,8 +269,7 @@ namespace DNN.Authentication.SAML
                     }
                     else if (Request.IsAuthenticated)
                     {
-                        //if (!Response.IsRequestBeingRedirected)
-                        //    Response.Redirect(Page.ResolveUrl(redirectTo), false);
+                        //Do Nothing if the request is authenticated
                     }
                     else
                     {
@@ -365,6 +381,78 @@ namespace DNN.Authentication.SAML
             }
 
         }
+
+        #region Role Helpers
+        private RoleInfo GetOrCreateRole(string roleName)
+        {
+            //Get the role
+            var role = RoleController.Instance.GetRoleByName(PortalId, roleName);
+            if (role != null)
+                return role;
+
+            //If not found, create it
+            var toCreate = new RoleInfo
+            {
+                AutoAssignment = false,
+                Description = "Added from SAML Login",
+                IsPublic = false,
+                PortalID = PortalId,
+                RoleGroupID = Null.NullInteger,
+                RoleName = roleName,
+                SecurityMode = SecurityMode.SecurityRole,
+                Status = RoleStatus.Approved
+            };
+            RoleController.Instance.AddRole(toCreate);
+            return RoleController.Instance.GetRoleByName(PortalId, roleName);
+        }
+
+        /// <summary>
+        /// Assigns roles
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="oRolesToAssign"></param>
+        private void AssignRolesFromList(UserInfo user, List<string> oRolesToAssign)
+        {
+            if (oRolesToAssign != null && oRolesToAssign.Count > 0)
+            {
+                //Loop through each assignment, and see if we need to add
+                foreach (var oCurrent in oRolesToAssign)
+                {
+                    //Make sure that the user needs it
+                    if (!user.IsInRole(oCurrent))
+                    {
+                        //Get role info
+                        var oCurrentRole = GetOrCreateRole(oCurrent);
+
+                        //Assign it
+                        RoleController.Instance.AddUserRole(PortalId, user.UserID, oCurrentRole.RoleID,
+                            RoleStatus.Approved, false, DateTime.Now.AddDays(-1), Null.NullDate);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Removes the roles from a user, based on a list of roles to remove
+        /// </summary>
+        /// <param name="user">The user.</param>
+        /// <param name="oRolesToRemove">The o roles to remove.</param>
+        private void RemoveRolesFromList(UserInfo user, List<string> oRolesToRemove)
+        {
+            if (oRolesToRemove != null && oRolesToRemove.Count > 0)
+            {
+                foreach (var oCurrent in oRolesToRemove)
+                {
+                    //Only remove if the user is in it
+                    if (user.IsInRole(oCurrent))
+                    {
+                        var oCurrentRole = RoleController.Instance.GetRoleByName(PortalId, oCurrent);
+                        RoleController.DeleteUserRole(user, oCurrentRole, PortalSettings, false);
+                    }
+                }
+            }
+        }
+        #endregion 
     }
 }
 

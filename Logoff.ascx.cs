@@ -1,27 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-
-using System.IO;
-using System.Threading;
-using DotNetNuke.Common.Utilities;
-using DotNetNuke.Entities.Modules;
-using DotNetNuke.Security;
 using DotNetNuke.Services.Authentication;
-using DotNetNuke.Services.Exceptions;
-using DotNetNuke.Services.Localization;
 using DotNetNuke.Services.Log.EventLog;
-using DotNetNuke.Entities.Users;
 using System.Xml;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Net;
-using System.Net.Http;
-using System.Collections.Specialized;
 
 namespace DNN.Authentication.SAML
 {
@@ -63,9 +43,6 @@ namespace DNN.Authentication.SAML
                 //;
                 config = DNNAuthenticationSAMLAuthenticationConfig.GetConfig(PortalId);
                 base.OnLogOff(e);
-                Session.Remove("sessionIndexFromSAMLResponse");
-
-                //LogToEventLog("Logoff()", string.Format("Redirecting to {0}", redirectTo));
                 Response.Redirect(config.IdPLogoutURL);
             }
             catch (System.Threading.ThreadAbortException tae)

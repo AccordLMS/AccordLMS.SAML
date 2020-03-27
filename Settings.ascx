@@ -22,9 +22,12 @@
 		float: right;
         margin-right: 100px;
 	}
+
+    .samlHeading { clear: both; margin-left: 15px;}
+    .samlParagraph { margin-left: 15px; margin-right: 15px;}
 </style>
 
-
+<h3 class="samlHeading">SAML Configuration</h3>
 <div class="dnnFormItem">
     <asp:label class="samlLabel" id="lblEnabled" runat="server" Text="Enabled:"></asp:label>
     <asp:CheckBox class="samlTextbox" Checked="true" runat="server" ID="chkEnabled"></asp:CheckBox>
@@ -53,6 +56,8 @@
     <asp:Label class="samlLabel" ID="lblTheirCert" runat="server" Text="X509 Certificate:" />
     <asp:TextBox class="samlTextbox" runat="server" ID="txtTheirCert" Columns="40" Rows="3" TextMode="MultiLine"></asp:TextBox>
 </div>
+<h3 class="samlHeading">User Profile Mappings</h3>
+<p class="samlParagraph">To map incoming values to their respective DNN Profile values provide the attribute name that should be used to lookup the value in the incoming SAML assertion.</p>
 <div class="dnnFormItem">
     <asp:Label class="samlLabel" ID="lblFirstName" runat="server" Text="First Name:" />
     <asp:TextBox class="samlTextbox" runat="server" ID="txtFirstName"></asp:TextBox>
@@ -69,19 +74,32 @@
     <asp:Label class="samlLabel" ID="lblEmail" runat="server" Text="Email:" />
     <asp:TextBox class="samlTextbox" runat="server" ID="txtEmail"></asp:TextBox>
 </div>
-
 <asp:Repeater ID="repeaterProps" runat="server">
     <ItemTemplate>
         <div class="dnnFormItem">
             <asp:Label class="samlLabel" ID="lblProperty" runat="server" Text='<%#Eval("Property") %>' />
             <asp:TextBox class="samlTextbox" runat="server" ID="txtMappedValue" Text='<%#Eval("Mapping") %>'></asp:TextBox>
         </div>
-        <%--<asp:Label ID="lblProperty2" runat="server" Text='<%#Eval("Property") %>' Font-Bold="true"/>
-        <asp:TextBox id="txtMappedValue2" CssClass="textValue" runat="server" Text='<%#Eval("Mapping") %>'></asp:TextBox>
-        <br />--%>
     </ItemTemplate>
 </asp:Repeater>
 
+<h3 class="samlHeading">DNN Role Mappings</h3>
+<p class="samlParagraph">
+    Using this feature you may provide an incoming SAML attribute that will contain a comma separated listing of DNN Roles that should be added to the user.  
+    Additionally you may optionally specify a listing of roles that MUST come as part of the SAML Assertion, if they are not found the role would be removed.
+</p>
+
+<p class="samlParagraph">Example: If you set "Required Roles" listing to be member,paidmember and a user comes across with only member, they would be added to the member role, and the paidmember
+    role if already existing on their account would be removed.  Any additional roles would be added, if the role exists within DNN.
+</p>
+<div class="dnnFormItem">
+    <asp:Label runat="server" class="samlLabel" id="lblRoleAttributeName" text="Role Listing Attribute" />
+    <asp:TextBox runat="server" id="txtRoleAttributeName" class="samlTextbox"></asp:TextBox>
+</div>
+<div class="dnnFormItem">
+    <asp:Label runat="server"  class="samlLabel" id="lblRequiredRoles" text="Required Roles" />
+    <asp:TextBox runat="server" id="txtRequiredRolesTextbox" class="samlTextbox"></asp:TextBox>
+</div>
 
 
 
