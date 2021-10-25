@@ -106,7 +106,7 @@ namespace DNN.Authentication.SAML
                 var setting = Null.NullString;
                 var row = ds.Tables[0].NewRow();
                 row[0] = def.PropertyName + ":";
-                if (PortalController.Instance.GetPortalSettings(PortalId).TryGetValue(usrPREFIX + def.PropertyName, out setting))
+                if (PortalController.Instance.GetPortalSettings(PortalId).TryGetValue(usrPREFIX + def.PropertyName + ":", out setting))
                 {
                     row[1] = setting;
                 }
@@ -236,7 +236,7 @@ namespace DNN.Authentication.SAML
         public string getProfilePropertySAMLName(string DNNpropertyName)
         {
             var setting = Null.NullString;
-            if (PortalController.Instance.GetPortalSettings(PortalID).TryGetValue(usrPREFIX + DNNpropertyName, out setting))
+            if (PortalController.Instance.GetPortalSettings(PortalID).TryGetValue(usrPREFIX + DNNpropertyName + ":", out setting))
             {
                 return setting;
             }
