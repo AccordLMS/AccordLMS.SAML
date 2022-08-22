@@ -121,12 +121,25 @@ namespace Saml
 		public bool IsValid()
 		{
 			XmlNodeList nodeList = _xmlDoc.SelectNodes("//ds:Signature", _xmlNameSpaceManager);
+            XmlNodeList nodeList2 = _xmlDoc.SelectNodes("//Signature", _xmlNameSpaceManager);
 
-			SignedXml signedXml = new SignedXml(_xmlDoc);
+            SignedXml signedXml = new SignedXml(_xmlDoc);
 
-			if (nodeList.Count == 0) return false;
-
-			signedXml.LoadXml((XmlElement)nodeList[0]);
+            if (nodeList.Count == 0) {
+                if (nodeList2.Count == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    signedXml.LoadXml((XmlElement)nodeList2[0]);
+                }
+            }
+            else
+            {
+                signedXml.LoadXml((XmlElement)nodeList[0]);
+            }
+			
 			return ValidateSignatureReference(signedXml) && signedXml.CheckSignature(_certificate.cert, true) && !IsExpired();
 		}
 

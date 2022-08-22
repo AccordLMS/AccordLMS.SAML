@@ -83,8 +83,9 @@ namespace DNN.Authentication.SAML
                         samlResponse.LoadXmlFromBase64(Request.Form["SAMLResponse"]); //SAML providers usually POST the data into this var
                                                                                       //String xmlExample = "";
                                                                                       //samlResponse.LoadXml(xmlExample);
-                       
 
+
+                        LogToEventLog("saml response:", samlResponse.Xml.ToString());
                         if (samlResponse.IsValid())
                         {
                             LogToEventLog("DNN.Authentication.SAML.OnLoad(tae)", string.Format("samlResponse is:  {0}", samlResponse.Xml.ToString()));
@@ -166,11 +167,18 @@ namespace DNN.Authentication.SAML
 
 
                             UserInfo userInfo = UserController.GetUserByName(PortalSettings.PortalId, username);
+                            List<UserInfo> allUsers = new List<UserInfo>();
+                            foreach (UserInfo user in UserController.GetUsers(false, false, -1))
+                            {
+                                allUsers.Add(user);
+                            }
 
+                            var allPortalUsersWithThisUsername = from u in allUsers where u.Username == username select u;
+                            UserInfo thisPortalUser = (from u in allPortalUsersWithThisUsername where u.PortalID == PortalId select u).FirstOrDefault();
 
                             if (userInfo == null)
                             {
-                                //user does not exists, it needs to be created.
+                               //user does not exists, it needs to be created.
                                 userInfo = new UserInfo();
                                 try
                                 {
@@ -193,7 +201,17 @@ namespace DNN.Authentication.SAML
                                             userInfo.Email = email;
                                             userInfo.PortalID = PortalSettings.PortalId;
                                             userInfo.IsSuperUser = false;
-                                            userInfo.Membership.Password = UserController.GeneratePassword();
+
+                                            if(thisPortalUser != null)
+                                            {
+                                                //The user exists in another portal, we need to set it the same password so it gets added to the portal
+                                                userInfo.Membership.Password = thisPortalUser.Membership.Password;
+                                            }
+                                            else
+                                            {
+                                                userInfo.Membership.Password = UserController.GeneratePassword();
+                                            }
+                                            
 
                                             var usrCreateStatus = new UserCreateStatus();
 
@@ -231,9 +249,10 @@ namespace DNN.Authentication.SAML
                                 {
                                     UserController.UnLockUser(userInfo);
                                 }
+                              
                                 LogToEventLog("DNN.Authentication.SAML.OnLoad(post !auth)", String.Format("FoundUser userInfo.Username: {0}", userInfo.Username));
 
-
+                                userInfo.Membership.Approved = true;
                                 try
                                 {
                                     if (username != null && email != null && firstname != null && lastname != null)
@@ -281,7 +300,7 @@ namespace DNN.Authentication.SAML
                             UserLoginStatus loginStatus = validStatus == UserValidStatus.VALID ? UserLoginStatus.LOGIN_SUCCESS : UserLoginStatus.LOGIN_FAILURE;
                             if (loginStatus == UserLoginStatus.LOGIN_SUCCESS)
                             {
-                                SetLoginDate(username);                           
+                                SetLoginDate(username);     
                                 //Raise UserAuthenticated Event
                                 var eventArgs = new UserAuthenticatedEventArgs(userInfo, userInfo.Email, loginStatus, config.DNNAuthName) //"DNN" is default, "SAML" is this one.  How did it get named SAML????
                                 {
@@ -289,7 +308,15 @@ namespace DNN.Authentication.SAML
                                     Message = "User authorized",
                                     RememberMe = false
                                 };
-                                OnUserAuthenticated(eventArgs);
+
+                                //OnUserAuthenticated(eventArgs);
+                                UserController.UserLogin(PortalId, userInfo, PortalSettings.PortalName, Request.UserHostAddress, false);
+
+                                if (config.RedirectURL.Trim() != String.Empty)
+                                {
+                                    Response.Redirect(config.RedirectURL, false);
+                                }
+                                                            
                             }
                         }
                         else

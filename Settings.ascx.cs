@@ -23,6 +23,7 @@ namespace DNN.Authentication.SAML
         {
             try
             {
+
                 var config = DNNAuthenticationSAMLAuthenticationConfig.GetConfig(PortalId);
                 config.PortalID = PortalId;
                 config.ConsumerServURL = txtConsumerServUrl.Text;
@@ -38,6 +39,7 @@ namespace DNN.Authentication.SAML
                 config.usrLastName = txtLastName.Text;
                 config.RoleAttribute = txtRoleAttributeName.Text;
                 config.RequiredRoles = txtRequiredRolesTextbox.Text;
+                config.RedirectURL = txtRedirectURL.Text;
 
                 DNNAuthenticationSAMLAuthenticationConfig.UpdateConfig(config);
 
@@ -80,6 +82,7 @@ namespace DNN.Authentication.SAML
                 chkEnabled.Checked = config.Enabled;
                 txtRoleAttributeName.Text = config.RoleAttribute;
                 txtRequiredRolesTextbox.Text = config.RequiredRoles;
+                txtRedirectURL.Text = config.RedirectURL;
             }
             catch (Exception exc)
             {
@@ -189,6 +192,10 @@ namespace DNN.Authentication.SAML
             if (PortalController.Instance.GetPortalSettings(portalID)
                 .TryGetValue(usrPREFIX + "RequiredRoles", out setting))
                 RequiredRoles = setting;
+
+            setting = Null.NullString;
+            if (PortalController.Instance.GetPortalSettings(portalID).TryGetValue(PREFIX + "RedirectURL", out setting))
+                RedirectURL = setting;
         }
 
         public bool Enabled { get; set; }
@@ -198,6 +205,7 @@ namespace DNN.Authentication.SAML
         public string ConsumerServURL { get; set; }
         public string DNNAuthName { get; set; }
         public string TheirCert { get; set; }
+        public string RedirectURL { get; set; }
 
         public string usrFirstName { get; set; }
         public string usrLastName { get; set; }
@@ -223,6 +231,7 @@ namespace DNN.Authentication.SAML
             PortalController.UpdatePortalSetting(config.PortalID, PREFIX + "ConsumerServURL", config.ConsumerServURL);
             PortalController.UpdatePortalSetting(config.PortalID, PREFIX + "DNNAuthName", config.DNNAuthName);
             PortalController.UpdatePortalSetting(config.PortalID, PREFIX + "TheirCert", config.TheirCert);
+            PortalController.UpdatePortalSetting(config.PortalID, PREFIX + "RedirectURL", config.RedirectURL);
 
             //ClearConfig(config.PortalID);
             PortalController.UpdatePortalSetting(config.PortalID, usrPREFIX + "FirstName", config.usrFirstName);
