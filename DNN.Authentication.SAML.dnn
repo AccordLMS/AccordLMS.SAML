@@ -1,6 +1,6 @@
 ﻿<dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="DNN.Authentication.SAML" type="Auth_System" version="02.01.06">
+    <package name="DNN.Authentication.SAML" type="Auth_System" version="02.01.07">
       <friendlyName>DNN.Authentication.SAML</friendlyName>
       <description>DNN.Authentication.SAML</description>
       <owner>

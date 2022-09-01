@@ -167,15 +167,7 @@ namespace DNN.Authentication.SAML
 
 
                             UserInfo userInfo = UserController.GetUserByName(PortalSettings.PortalId, username);
-                            List<UserInfo> allUsers = new List<UserInfo>();
-                            foreach (UserInfo user in UserController.GetUsers(false, false, -1))
-                            {
-                                allUsers.Add(user);
-                            }
-
-                            var allPortalUsersWithThisUsername = from u in allUsers where u.Username == username select u;
-                            UserInfo thisPortalUser = (from u in allPortalUsersWithThisUsername where u.PortalID == PortalId select u).FirstOrDefault();
-
+                            
                             if (userInfo == null)
                             {
                                //user does not exists, it needs to be created.
@@ -201,18 +193,7 @@ namespace DNN.Authentication.SAML
                                             userInfo.Email = email;
                                             userInfo.PortalID = PortalSettings.PortalId;
                                             userInfo.IsSuperUser = false;
-
-                                            if(thisPortalUser != null)
-                                            {
-                                                //The user exists in another portal, we need to set it the same password so it gets added to the portal
-                                                userInfo.Membership.Password = thisPortalUser.Membership.Password;
-                                            }
-                                            else
-                                            {
-                                                userInfo.Membership.Password = UserController.GeneratePassword();
-                                            }
-                                            
-
+                                           
                                             var usrCreateStatus = new UserCreateStatus();
 
                                             usrCreateStatus = UserController.CreateUser(ref userInfo);
@@ -309,14 +290,7 @@ namespace DNN.Authentication.SAML
                                     RememberMe = false
                                 };
 
-                                //OnUserAuthenticated(eventArgs);
-                                UserController.UserLogin(PortalId, userInfo, PortalSettings.PortalName, Request.UserHostAddress, false);
-
-                                if (config.RedirectURL.Trim() != String.Empty)
-                                {
-                                    Response.Redirect(config.RedirectURL, false);
-                                }
-                                                            
+                                OnUserAuthenticated(eventArgs);                                                            
                             }
                         }
                         else
