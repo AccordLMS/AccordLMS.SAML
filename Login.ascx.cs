@@ -193,6 +193,7 @@ namespace DNN.Authentication.SAML
                                             userInfo.Email = email;
                                             userInfo.PortalID = PortalSettings.PortalId;
                                             userInfo.IsSuperUser = false;
+                                            userInfo.Membership.Password = UserController.GeneratePassword();
                                            
                                             var usrCreateStatus = new UserCreateStatus();
 
@@ -290,7 +291,17 @@ namespace DNN.Authentication.SAML
                                     RememberMe = false
                                 };
 
-                                OnUserAuthenticated(eventArgs);                                                            
+                                UserController.UserLogin(PortalId, userInfo, PortalSettings.PortalName, Request.UserHostAddress, false);
+
+                                if (config.RedirectURL != Null.NullString)
+                                {
+                                    if(config.RedirectURL.Trim() != String.Empty && config.RedirectURL.Trim() != "")
+                                    {
+                                        Response.Redirect(config.RedirectURL, false);
+                                    }
+                                }
+
+                                //OnUserAuthenticated(eventArgs);                                                            
                             }
                         }
                         else
