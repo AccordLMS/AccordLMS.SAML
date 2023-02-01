@@ -14,6 +14,7 @@ using System.Security.Cryptography.Xml;
 using System.IO.Compression;
 using System.Text;
 using System.Security.Cryptography;
+using DotNetNuke.Services.Log.EventLog;
 
 namespace Saml
 {
@@ -91,10 +92,29 @@ namespace Saml
 		private XmlDocument _xmlDoc;
 		private Certificate _certificate;
 		private XmlNamespaceManager _xmlNameSpaceManager; //we need this one to run our XPath queries on the SAML XML
+        private static DotNetNuke.Entities.Portals.PortalSettings staticPortalSettings;
 
-		public string Xml { get { return _xmlDoc.OuterXml; } }
+        public string Xml { get { return _xmlDoc.OuterXml; } }
 
-		public Response(string certificateStr)
+        public static void LogToEventLog(string methodName, string message)
+        {
+            DotNetNuke.Services.Log.EventLog.ExceptionLogController objEventLog = new DotNetNuke.Services.Log.EventLog.ExceptionLogController();
+            DotNetNuke.Services.Log.EventLog.LogInfo objEventLogInfo = new DotNetNuke.Services.Log.EventLog.LogInfo();
+            objEventLogInfo.BypassBuffering = true;
+            objEventLogInfo.LogTypeKey = "ADMIN_ALERT";
+            objEventLogInfo.LogPortalID = staticPortalSettings.PortalId;
+
+            LogDetailInfo logInfo1 = new LogDetailInfo("methodName: ", methodName);
+            LogDetailInfo logInfo2 = new LogDetailInfo("Message: ", message);
+            objEventLogInfo.LogProperties.Add(logInfo1);
+            objEventLogInfo.LogProperties.Add(logInfo2);
+            objEventLog.AddLog(objEventLogInfo);
+
+            //eventLog.AddLog("DNN.Authentication.SAML." + methodName + " : " + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss:fff"), message, staticPortalSettings, -1, EventLogController.EventLogType.ADMIN_ALERT);
+
+        }
+
+        public Response(string certificateStr)
 		{
 			RSAPKCS1SHA256SignatureDescription.Init(); //init the SHA256 crypto provider (for needed for .NET 4.0 and lower)
 
@@ -120,7 +140,7 @@ namespace Saml
 
 		public bool IsValid()
 		{
-			XmlNodeList nodeList = _xmlDoc.SelectNodes("//ds:Signature", _xmlNameSpaceManager);
+            XmlNodeList nodeList = _xmlDoc.SelectNodes("//ds:Signature", _xmlNameSpaceManager);
             XmlNodeList nodeList2 = _xmlDoc.SelectNodes("//Signature", _xmlNameSpaceManager);
 
             SignedXml signedXml = new SignedXml(_xmlDoc);
@@ -139,8 +159,8 @@ namespace Saml
             {
                 signedXml.LoadXml((XmlElement)nodeList[0]);
             }
-			
-			return ValidateSignatureReference(signedXml) && signedXml.CheckSignature(_certificate.cert, true) && !IsExpired();
+
+            return ValidateSignatureReference(signedXml) && signedXml.CheckSignature(_certificate.cert, true) && !IsExpired();
 		}
 
 		//an XML signature can "cover" not the whole document, but only a part of it
